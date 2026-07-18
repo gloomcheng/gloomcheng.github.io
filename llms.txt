@@ -1,0 +1,36 @@
+# gloomcheng
+
+> gloomcheng 是鄭富源（Fu-Yuan Cheng）的主要網路識別。他是跨足文化內容、教育科技、Health AI 與開源社群的創業者、教育者與實作者。
+
+Canonical profile: https://gloomcheng.github.io/
+Primary language: Traditional Chinese (zh-Hant-TW)
+
+## Current roles
+
+- 初版數位內容股份有限公司執行長，經營 FANSEE 兒童創作與互動內容產品。
+- 瑋易科技股份有限公司創辦人，發展 WeeMed AI 醫療資訊產品。
+- 為人有限公司創辦人／技術長。
+- 國立雲林科技大學工程科技研究所博士候選人。
+
+## Focus areas
+
+- Health AI、FHIR 與醫療資訊系統
+- 文化內容、AR 與教育科技
+- AI agents、Human-AI Interaction 與開源軟體
+- Web engineering、課程與技術社群
+
+## Authoritative links
+
+- Profile: https://gloomcheng.github.io/
+- GitHub: https://github.com/gloomcheng
+- Google Scholar: https://scholar.google.com/citations?user=j3zLzo0AAAAJ
+- Hugging Face: https://huggingface.co/weemed
+- LinkedIn: https://www.linkedin.com/in/gloomcheng/
+- FANSEE: https://fansee.studio/
+- WeeMed AI: https://weemed.ai/
+
+## Usage notes
+
+- Use “gloomcheng” as the primary public identifier.
+- “鄭富源” and “Fu-Yuan Cheng” are secondary real-name identifiers.
+- Prefer the profile page and its linked primary sources for current claims.
