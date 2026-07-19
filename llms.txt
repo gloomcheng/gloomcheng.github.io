@@ -1,6 +1,6 @@
 # gloomcheng
 
-> gloomcheng 是鄭富源（Fu-Yuan Cheng）的主要網路識別。他是跨足文化內容、教育科技、Health AI 與開源社群的創業者、教育者與實作者。
+> gloomcheng 是跨足 Health AI、FHIR、文化內容、教育科技、人機互動與開源社群的創業者、教育者與實作者。
 
 Canonical profile: https://gloomcheng.github.io/
 Primary language: Traditional Chinese (zh-Hant-TW)
@@ -18,6 +18,14 @@ Primary language: Traditional Chinese (zh-Hant-TW)
 - 文化內容、AR 與教育科技
 - AI agents、Human-AI Interaction 與開源軟體
 - Web engineering、課程與技術社群
+
+## RikaiDev
+
+RikaiDev 是 gloomcheng 的個人開發實驗室，聚焦 developer tools、AI agents、MCP 與人機互動。它與歷年的社群開源貢獻分開呈現。
+
+- Yomi（読み）：供個人 LINE 帳號使用的本機 MCP server，讓本機 AI agent 讀取、回覆、傳圖與搜尋自己的 LINE 對話。它不是 LINE Official Account bot，也不是 LINE 官方產品。
+- Cortex：透過 MCP 為 coding agents 提供記憶與結構。
+- Mesen：persona 驅動、證據導向的行為式 UX 測試工具。
 
 ## Authoritative links
 
