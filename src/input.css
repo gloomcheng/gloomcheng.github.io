@@ -1,13 +1,51 @@
 @import "tailwindcss";
 @source "../index.html";
 
+@font-face {
+  font-family: "LINE Seed TW";
+  src: url("../assets/fonts/line-seed-tw-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed TW";
+  src: url("../assets/fonts/line-seed-tw-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed TW";
+  src: url("../assets/fonts/line-seed-tw-extra-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800 900;
+  font-display: swap;
+}
+
 @theme {
   --color-brand: #006a78;
   --color-brand-accent: #ff5f03;
   --color-brand-paper: #edeade;
   --color-brand-ink: #111827;
-  --font-sans: "Ubuntu", "Noto Sans TC", sans-serif;
-  --font-display: "Gelasio", "Noto Serif TC", serif;
-  --font-serif: "Gelasio", "Noto Serif TC", serif;
+  --font-sans: "LINE Seed TW", system-ui, sans-serif;
+  --font-display: "LINE Seed TW", system-ui, sans-serif;
   --font-mono: "Ubuntu Mono", monospace;
+}
+
+@keyframes beast-breathe {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -8px, 0) rotate(-0.6deg); }
+}
+
+@keyframes cover-in {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes rule-in {
+  from { opacity: 0; transform: translate3d(-18px, 0, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
