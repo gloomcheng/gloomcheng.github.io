@@ -1,1 +1,4 @@
 node_modules/
+.DS_Store
+ip-candidates/
+assets/brand/seed-beast-c2/vector-candidate/

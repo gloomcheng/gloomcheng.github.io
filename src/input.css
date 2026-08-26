@@ -2,11 +2,12 @@
 @source "../index.html";
 
 @theme {
-  --color-brand: #072c2c;
+  --color-brand: #006a78;
   --color-brand-accent: #ff5f03;
   --color-brand-paper: #edeade;
   --color-brand-ink: #111827;
-  --font-sans: "Ubuntu", sans-serif;
-  --font-display: "Oswald", sans-serif;
+  --font-sans: "Ubuntu", "Noto Sans TC", sans-serif;
+  --font-display: "Gelasio", "Noto Serif TC", serif;
+  --font-serif: "Gelasio", "Noto Serif TC", serif;
   --font-mono: "Ubuntu Mono", monospace;
 }
