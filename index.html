@@ -1,345 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>gloomcheng｜Healthcare AI Founder &amp; Open-source Builder</title>
-    <meta
-      name="description"
-      content="鄭富源（gloomcheng）是 Healthcare AI 創業者、教育者與開源實作者，專注地端 AI、FHIR 健康資料流與可驗證的醫療數位轉型。"
-   >
-    <meta name="theme-color" content="#072c2c">
-    <meta
-      property="og:title"
-      content="gloomcheng｜Healthcare AI Founder & Open-source Builder"
-   >
-    <meta
-      property="og:description"
-      content="把紙本、資料孤島與現場流程，轉成可部署、可驗證的 FHIR 健康資料流。"
-   >
-    <meta
-      property="og:image"
-      content="https://gloomcheng.github.io/profile-avatar.png"
-   >
-    <meta property="og:url" content="https://gloomcheng.github.io/">
-    <link rel="canonical" href="https://gloomcheng.github.io/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Ubuntu+Mono:wght@400;700&amp;family=Ubuntu:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-   >
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">跳到主要內容</a>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="回到首頁"
-        >gloomcheng<span>/</span></a
-      >
-      <nav aria-label="主要導覽">
-        <a href="#thesis">主張</a><a href="#work">實績</a
-        ><a href="#open-source">開源</a><a href="#evidence">成果</a
-        ><a class="nav-cta" href="#connect">合作</a>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">FOUNDER · EDUCATOR · OPEN-SOURCE BUILDER</p>
-          <h1>把醫療現場的<br><em>複雜</em>，變成可以運作的系統。</h1>
-          <p class="hero-lead">
-            我是鄭富源（Fu-Yuan Cheng）。我建造地端 Healthcare AI 與 FHIR
-            資料產品，讓紙本、試算表與資料孤島成為可治理、可採取行動的健康資料流。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://weemed.ai/"
-              >探索 WeeMed AI</a
-            ><a
-              class="button button-secondary"
-              href="https://github.com/gloomcheng"
-              >查看 GitHub</a
-            >
-          </div>
-          <ul class="signal-list" aria-label="目前角色">
-            <li>瑋易科技創辦人</li>
-            <li>初版數位內容執行長</li>
-            <li>雲科大博士候選人</li>
-          </ul>
-        </div>
-        <figure class="portrait-card">
-          <img
-            src="profile-avatar.png"
-            alt="鄭富源的像素風格個人識別肖像"
-            width="640"
-            height="640"
-         >
-          <figcaption>
-            <span>STATUS</span> Open to meaningful collaboration
-          </figcaption>
-        </figure>
-      </section>
-      <section class="proof-strip" aria-label="可驗證成果">
-        <article>
-          <strong>80%</strong><span>大同醫院健檢預約轉為線上</span>
-        </article>
-        <article><strong>3 → 1</strong><span>電話值機所需人力</span></article>
-        <article><strong>10%</strong><span>報導所載服務績效年增</span></article>
-        <article>
-          <strong>20+</strong><span>年橫跨產品、技術與教育</span>
-        </article>
-      </section>
-      <section class="explainer" aria-labelledby="explainer-title">
-        <div class="explainer-copy">
-          <p class="eyebrow">HOW I WORK / ELI5</p>
-          <h2 id="explainer-title">我做的事，其實只有三步。</h2>
-          <p>
-            不需要先懂 AI、FHIR
-            或軟體架構。先看見現場卡住的地方，再把它變成能工作的產品，最後用真實結果證明。
-          </p>
-        </div>
-        <ol class="explainer-flow">
-          <li>
-            <span class="flow-number">1</span>
-            <div class="flow-symbol" aria-hidden="true">亂</div>
-            <h3>找到真正的問題</h3>
-            <p>紙本、電話、Excel 與分散流程讓人疲於奔命。</p>
-          </li>
-          <li>
-            <span class="flow-number">2</span>
-            <div class="flow-symbol" aria-hidden="true">→</div>
-            <h3>把複雜變成系統</h3>
-            <p>用產品、FHIR、AI 與開源方法，接成一條可信任的工作流。</p>
-          </li>
-          <li>
-            <span class="flow-number">3</span>
-            <div class="flow-symbol" aria-hidden="true">✓</div>
-            <h3>用結果驗證</h3>
-            <p>少花多少時間、減少多少人工、是否真的有人持續使用。</p>
-          </li>
-        </ol>
-      </section>
-      <section class="section thesis" id="thesis">
-        <header class="section-header">
-          <p class="eyebrow">01 / FOUNDER THESIS</p>
-          <h2>AI 不是產品。<br>可信任的轉型結果才是。</h2>
-        </header>
-        <div class="thesis-grid">
-          <p class="section-intro">
-            我相信定義問題比追逐技術更重要。醫療 AI 的價值不在回答一個
-            prompt，而在把現場資料可靠地接進同一條健康資料流，完成一個真正可追蹤的工作閉環。
-          </p>
-          <div class="principles">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>主權即產品</h3>
-                <p>
-                  讓資料留在機構控制的環境；部署位置不是妥協，而是信任基礎。
-                </p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>Deterministic first</h3>
-                <p>
-                  先辨識熟悉事實，再讓 AI
-                  處理真正模糊的殘差；失敗時仍能安全退化。
-                </p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>結果回到同一條流</h3>
-                <p>
-                  洞察必須通往可治理的行動，結果再回寫
-                  FHIR，而不是停在聊天視窗。
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section work" id="work">
-        <header class="section-header split-header">
-          <div>
-            <p class="eyebrow">02 / SELECTED WORK</p>
-            <h2>從場域問題，到可持續產品。</h2>
-          </div>
-          <p>
-            三條實作軸線，共用同一種能力：把模糊需求變成產品、流程與可驗證成果。
-          </p>
-        </header>
-        <div class="venture-grid">
-          <article class="venture venture-featured">
-            <div class="venture-top">
-              <span>HEALTHCARE</span><time>2021—NOW</time>
-            </div>
-            <h3>WeeMed AI</h3>
-            <p>
-              以 Hygieia 為共用基礎，串連 Hi-Checkup、Hi-Care、Hi-Work、Hi-Hope
-              與 Portal；將醫療現場資料轉成統一 FHIR 健康資料流。
-            </p>
-            <ul>
-              <li>On-premise first</li>
-              <li>SMART on FHIR</li>
-              <li>Healthcare Vertical AI</li>
-            </ul>
-            <a href="https://weemed.ai/"
-              >查看 WeeMed AI <span aria-hidden="true">↗</span></a
-            >
-          </article>
-          <article class="venture">
-            <div class="venture-top">
-              <span>EDTECH × CULTURE</span><time>2019—NOW</time>
-            </div>
-            <h3>FANSEE</h3>
-            <p>
-              讓孩子的手繪角色走進故事。從 AR 劇場盒、族語內容到 Talkie
-              AI，把技術變成兒童能參與的文化體驗。
-            </p>
-            <a href="https://fansee.studio/"
-              >查看 FANSEE <span aria-hidden="true">↗</span></a
-            >
-          </article>
-          <article class="venture">
-            <div class="venture-top">
-              <span>PERSONAL LAB</span><time>ONGOING</time>
-            </div>
-            <h3>RikaiDev</h3>
-            <p>
-              把日常工作裡尚未被好好解決的問題，做成可使用、檢驗與分享的開源工具。
-            </p>
-            <a href="https://github.com/RikaiDev"
-              >查看 RikaiDev <span aria-hidden="true">↗</span></a
-            >
-          </article>
-        </div>
-      </section>
-      <section class="section open-source" id="open-source">
-        <header class="section-header split-header">
-          <div>
-            <p class="eyebrow">03 / OPEN SOURCE</p>
-            <h2>把能力公開，讓證據替我說話。</h2>
-          </div>
-          <p>
-            開源不是附錄，而是可重現的履歷。以下專案呈現我對 agent
-            workflow、模型部署、語言與教育的持續投入。
-          </p>
-        </header>
-        <div class="project-list">
-          <a href="https://rikaidev.github.io/yomi/"
-            ><span class="project-index">01</span>
-            <div>
-              <h3>yomi（読み）</h3>
-              <p>供個人 LINE 帳號使用的本機 MCP server</p>
-            </div>
-            <b>TypeScript ↗</b></a
-          >
-          <a href="https://github.com/RikaiDev/toki"
-            ><span class="project-index">02</span>
-            <div>
-              <h3>toki</h3>
-              <p>隱私優先、零摩擦的開發者時間追蹤</p>
-            </div>
-            <b>Rust ↗</b></a
-          >
-          <a href="https://huggingface.co/weemed/IlhaEmbed"
-            ><span class="project-index">03</span>
-            <div>
-              <h3>IlhaEmbed</h3>
-              <p>WeeMed 發佈的語言嵌入模型</p>
-            </div>
-            <b>Hugging Face ↗</b></a
-          >
-          <a href="https://pypi.org/project/mindar/"
-            ><span class="project-index">04</span>
-            <div>
-              <h3>mindar</h3>
-              <p>FANSEE LAB 的 edge image recognition package</p>
-            </div>
-            <b>Python ↗</b></a
-          >
-          <a href="https://github.com/gloomcheng/zh-hant.react.dev"
-            ><span class="project-index">05</span>
-            <div>
-              <h3>zh-hant.react.dev</h3>
-              <p>React 官方文件繁體中文翻譯</p>
-            </div>
-            <b>TypeScript ↗</b></a
-          >
-        </div>
-        <div class="open-source-cta">
-          <p>更多模型、課程教材與歷史開源貢獻</p>
-          <div>
-            <a href="https://github.com/gloomcheng">GitHub</a
-            ><a href="https://huggingface.co/weemed">Hugging Face</a
-            ><a href="https://www.drupal.org/u/gloomcheng">Drupal.org</a>
-          </div>
-        </div>
-      </section>
-      <section class="section evidence" id="evidence">
-        <header class="section-header">
-          <p class="eyebrow">04 / PUBLIC EVIDENCE</p>
-          <h2>精選成果，而不是完整清單。</h2>
-        </header>
-        <div class="evidence-grid">
-          <article>
-            <span>PUBLICATION · 2024</span>
-            <h3>歐盟人工智慧法與生成式 AI 規範</h3>
-            <p>楊智傑、鄭富源｜《國會季刊》52</p>
-            <a
-              href="https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=5266&amp;pid=238792"
-              >閱讀資料 ↗</a
-            >
-          </article>
-          <article>
-            <span>PUBLICATION · 2015</span>
-            <h3>
-              Theory of Variable Fuzzy Sets for Artificial Emotions Prediction
-            </h3>
-            <p>Mathematical Problems in Engineering</p>
-            <a href="https://doi.org/10.1155/2015/250506">DOI ↗</a>
-          </article>
-          <article>
-            <span>PRODUCER · 2015</span>
-            <h3>Palace, Deliberation, Horn, Manifestation</h3>
-            <p>Alexandre Rangel｜Sonic Pi live coding｜台中軟實力論壇</p>
-            <a href="https://www.youtube.com/watch?v=F42cdvNDxmg"
-              >觀看影片 ↗</a
-            >
-          </article>
-          <article>
-            <span>PRESS · 2026</span>
-            <h3>從紙本到數位化：協助醫療院所加速轉型</h3>
-            <p>看雜誌 276 期</p>
-            <a
-              href="https://weemed.ai/news/watch-magazine-276-weiren-hospital-digitalization-2026/"
-              >閱讀報導 ↗</a
-            >
-          </article>
-        </div>
-      </section>
-      <section class="section connect" id="connect">
-        <p class="eyebrow">05 / CONNECT</p>
-        <h2>如果你也在處理<br>真正難的現場問題，我們可以談談。</h2>
-        <p>醫療數位轉型、FHIR、主權 AI、開源協作、教育科技與研究合作。</p>
-        <div class="hero-actions">
-          <a
-            class="button button-accent"
-            href="https://www.linkedin.com/in/gloomcheng/"
-            >在 LinkedIn 聯絡</a
-          ><a class="button button-dark" href="https://github.com/gloomcheng"
-            >Follow on GitHub</a
-          >
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <span>© 2026 gloomcheng · 鄭富源</span
-      ><span>Founder · Educator · Open-source Builder</span>
-    </footer>
-  </body>
+<html lang="zh-Hant-TW" class="scroll-smooth motion-reduce:scroll-auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>gloomcheng｜Healthcare AI Founder &amp; Open-source Builder</title>
+  <meta name="description" content="鄭富源（gloomcheng）是 Healthcare AI 創業者、教育者與開源實作者，專注地端 AI、FHIR 健康資料流與可驗證的醫療數位轉型。">
+  <meta name="theme-color" content="#072c2c">
+  <meta property="og:title" content="gloomcheng｜Healthcare AI Founder & Open-source Builder">
+  <meta property="og:description" content="把紙本、資料孤島與現場流程，轉成可部署、可驗證的 FHIR 健康資料流。">
+  <meta property="og:image" content="https://gloomcheng.github.io/profile-avatar.png">
+  <meta property="og:url" content="https://gloomcheng.github.io/">
+  <link rel="canonical" href="https://gloomcheng.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Ubuntu+Mono:wght@400;700&amp;family=Ubuntu:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="m-0 bg-brand-paper font-sans leading-relaxed text-brand-ink">
+  <a class="fixed -top-16 left-4 z-50 bg-brand-accent px-4 py-3 text-white focus:top-4" href="#main">跳到主要內容</a>
+  <header class="sticky top-0 z-40 flex min-h-[74px] items-center justify-between border-b border-brand/20 bg-brand-paper/95 px-[clamp(1.25rem,4vw,4rem)] backdrop-blur-xl">
+    <a class="font-mono text-lg font-bold no-underline" href="#top" aria-label="回到首頁">gloomcheng<span class="text-brand-accent">/</span></a>
+    <nav class="flex items-center gap-6 font-bold" aria-label="主要導覽">
+      <a class="hidden text-sm lg:block" href="#thesis">主張</a><a class="hidden text-sm lg:block" href="#work">實績</a><a class="hidden text-sm lg:block" href="#open-source">開源</a><a class="hidden text-sm lg:block" href="#evidence">成果</a><a class="bg-brand px-4 py-2.5 text-sm text-white no-underline" href="#connect">合作</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="mx-auto grid min-h-[calc(100vh-74px)] max-w-[1240px] grid-cols-1 items-center gap-10 px-[clamp(1.25rem,4vw,4rem)] py-[clamp(4rem,8vw,8rem)] lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,.65fr)] lg:gap-[clamp(2rem,6vw,7rem)]" id="top">
+      <div>
+        <p class="mb-5 font-mono text-xs font-bold tracking-[.12em] text-brand-accent">FOUNDER · EDUCATOR · OPEN-SOURCE BUILDER</p>
+        <h1 class="m-0 max-w-[880px] font-display text-[clamp(3.1rem,15vw,5rem)] leading-[.98] font-semibold tracking-[-.02em] uppercase lg:text-[clamp(3.5rem,6.3vw,6.5rem)]">把醫療現場的<br><em class="font-normal not-italic text-brand-accent">複雜</em>，變成可以運作的系統。</h1>
+        <p class="my-8 max-w-[730px] text-[clamp(1.05rem,1.7vw,1.4rem)]">我是鄭富源（Fu-Yuan Cheng）。我建造地端 Healthcare AI 與 FHIR 資料產品，讓紙本、試算表與資料孤島成為可治理、可採取行動的健康資料流。</p>
+        <div class="flex flex-wrap gap-3"><a class="inline-flex min-h-12 items-center border-2 border-brand bg-brand px-5 py-3 font-bold text-white no-underline" href="https://weemed.ai/">探索 WeeMed AI</a><a class="inline-flex min-h-12 items-center border-2 border-brand px-5 py-3 font-bold no-underline" href="https://github.com/gloomcheng">查看 GitHub</a></div>
+        <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2 p-0 font-mono text-xs font-bold text-brand-ink/60 uppercase"><li class="list-none">瑋易科技創辦人</li><li class="list-none">初版數位內容執行長</li><li class="list-none">雲科大博士候選人</li></ul>
+      </div>
+      <figure class="m-0 max-w-[520px] bg-brand shadow-[16px_16px_0_#ff5f03]"><img class="aspect-square w-full object-cover" src="profile-avatar.png" alt="鄭富源的像素風格個人識別肖像" width="640" height="640"><figcaption class="flex justify-between gap-4 p-4 font-mono text-xs text-white"><span class="text-emerald-300">STATUS</span> Open to meaningful collaboration</figcaption></figure>
+    </section>
+
+    <section class="grid grid-cols-1 bg-brand text-white sm:grid-cols-2 xl:grid-cols-4" aria-label="可驗證成果">
+      <article class="min-h-36 border-b border-white/20 px-[clamp(1.25rem,4vw,4rem)] py-8 xl:border-r"><strong class="block font-display text-[clamp(2.5rem,5vw,4rem)] text-brand-accent">80%</strong><span class="text-sm">大同醫院健檢預約轉為線上</span></article>
+      <article class="min-h-36 border-b border-white/20 px-[clamp(1.25rem,4vw,4rem)] py-8 xl:border-r"><strong class="block font-display text-[clamp(2.5rem,5vw,4rem)] text-brand-accent">3 → 1</strong><span class="text-sm">電話值機所需人力</span></article>
+      <article class="min-h-36 border-b border-white/20 px-[clamp(1.25rem,4vw,4rem)] py-8 xl:border-r"><strong class="block font-display text-[clamp(2.5rem,5vw,4rem)] text-brand-accent">10%</strong><span class="text-sm">報導所載服務績效年增</span></article>
+      <article class="min-h-36 border-b border-white/20 px-[clamp(1.25rem,4vw,4rem)] py-8"><strong class="block font-display text-[clamp(2.5rem,5vw,4rem)] text-brand-accent">20+</strong><span class="text-sm">年橫跨產品、技術與教育</span></article>
+    </section>
+
+    <section class="grid grid-cols-1 gap-10 bg-orange-100 px-[max(clamp(1.25rem,4vw,4rem),calc((100vw-1240px)/2+clamp(1.25rem,4vw,4rem)))] py-[clamp(4rem,8vw,7rem)] lg:grid-cols-[.7fr_1.3fr] lg:gap-24" aria-labelledby="explainer-title">
+      <div><p class="mb-5 font-mono text-xs font-bold tracking-[.12em] text-brand-accent">HOW I WORK / ELI5</p><h2 class="m-0 font-display text-[clamp(2.6rem,5vw,5rem)] leading-none font-semibold uppercase" id="explainer-title">我做的事，其實只有三步。</h2><p class="mt-6 max-w-lg text-lg">不需要先懂 AI、FHIR 或軟體架構。先看見現場卡住的地方，再把它變成能工作的產品，最後用真實結果證明。</p></div>
+      <ol class="grid grid-cols-1 p-0 lg:grid-cols-3">
+        <li class="min-h-56 list-none border-2 border-brand bg-amber-50 p-5 lg:min-h-80"><span class="font-mono text-xs text-brand-accent">1</span><div class="my-8 grid size-20 place-items-center rounded-full bg-brand font-display text-4xl text-white">亂</div><h3 class="font-display text-2xl uppercase">找到真正的問題</h3><p class="text-sm text-brand-ink/65">紙本、電話、Excel 與分散流程讓人疲於奔命。</p></li>
+        <li class="min-h-56 list-none border-x-2 border-b-2 border-brand bg-amber-50 p-5 lg:min-h-80 lg:border-y-2 lg:border-x-0"><span class="font-mono text-xs text-brand-accent">2</span><div class="my-8 grid size-20 place-items-center rounded-full bg-brand font-display text-4xl text-white">→</div><h3 class="font-display text-2xl uppercase">把複雜變成系統</h3><p class="text-sm text-brand-ink/65">用產品、FHIR、AI 與開源方法，接成一條可信任的工作流。</p></li>
+        <li class="min-h-56 list-none border-2 border-t-0 border-brand bg-amber-50 p-5 lg:min-h-80 lg:border-t-2"><span class="font-mono text-xs text-brand-accent">3</span><div class="my-8 grid size-20 place-items-center rounded-full bg-brand font-display text-4xl text-white">✓</div><h3 class="font-display text-2xl uppercase">用結果驗證</h3><p class="text-sm text-brand-ink/65">少花多少時間、減少多少人工、是否真的有人持續使用。</p></li>
+      </ol>
+    </section>
+
+    <section class="bg-amber-50 px-[max(clamp(1.25rem,4vw,4rem),calc((100vw-1240px)/2+clamp(1.25rem,4vw,4rem)))] py-[clamp(5rem,10vw,9rem)]" id="thesis">
+      <header class="mb-16"><p class="font-mono text-xs font-bold text-brand-accent">01 / FOUNDER THESIS</p><h2 class="max-w-4xl font-display text-[clamp(2.8rem,6vw,5.6rem)] leading-[.98] font-semibold uppercase">AI 不是產品。<br>可信任的轉型結果才是。</h2></header>
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-28"><p class="m-0 text-[clamp(1.2rem,2vw,1.6rem)]">我相信定義問題比追逐技術更重要。醫療 AI 的價值不在回答一個 prompt，而在把現場資料可靠地接進同一條健康資料流，完成一個真正可追蹤的工作閉環。</p><div>
+        <article class="grid grid-cols-[50px_1fr] gap-4 border-t border-brand/20 py-6"><span class="font-mono text-xs text-brand-accent">01</span><div><h3 class="m-0">主權即產品</h3><p class="text-brand-ink/65">資料留在機構控制的環境；部署位置是信任基礎。</p></div></article>
+        <article class="grid grid-cols-[50px_1fr] gap-4 border-t border-brand/20 py-6"><span class="font-mono text-xs text-brand-accent">02</span><div><h3 class="m-0">Deterministic first</h3><p class="text-brand-ink/65">先辨識熟悉事實，AI 只處理真正模糊的殘差。</p></div></article>
+        <article class="grid grid-cols-[50px_1fr] gap-4 border-t border-brand/20 py-6"><span class="font-mono text-xs text-brand-accent">03</span><div><h3 class="m-0">結果回到同一條流</h3><p class="text-brand-ink/65">洞察通往受治理的行動，結果再回寫 FHIR。</p></div></article>
+      </div></div>
+    </section>
+
+    <section class="px-[max(clamp(1.25rem,4vw,4rem),calc((100vw-1240px)/2+clamp(1.25rem,4vw,4rem)))] py-[clamp(5rem,10vw,9rem)]" id="work">
+      <header class="mb-16 grid gap-8 lg:grid-cols-[1.4fr_.6fr] lg:items-end"><div><p class="font-mono text-xs font-bold text-brand-accent">02 / SELECTED WORK</p><h2 class="max-w-4xl font-display text-[clamp(2.8rem,6vw,5.6rem)] leading-[.98] font-semibold uppercase">從場域問題，到可持續產品。</h2></div><p class="text-brand-ink/65">三條實作軸線，共用同一種能力：把模糊需求變成產品、流程與可驗證成果。</p></header>
+      <div class="grid grid-cols-1 gap-px border border-brand bg-brand lg:grid-cols-2">
+        <article class="flex min-h-[560px] flex-col bg-brand p-8 text-white lg:row-span-2 lg:min-h-[780px]"><div class="flex justify-between font-mono text-xs text-brand-accent"><span>HEALTHCARE</span><time>2021—NOW</time></div><h3 class="mt-auto font-display text-[clamp(3rem,6vw,6rem)] uppercase">WeeMed AI</h3><p>以 Hygieia 串連四套產品，將醫療現場資料轉成統一 FHIR 健康資料流。</p><a class="font-bold" href="https://weemed.ai/">查看 WeeMed AI ↗</a></article>
+        <article class="flex min-h-96 flex-col bg-brand-paper p-8"><div class="flex justify-between font-mono text-xs text-brand-accent"><span>EDTECH × CULTURE</span><time>2019—NOW</time></div><h3 class="mt-auto font-display text-[clamp(3rem,6vw,6rem)] uppercase">FANSEE</h3><p>從 AR 劇場盒、族語內容到 Talkie AI，把技術變成兒童能參與的文化體驗。</p><a class="font-bold" href="https://fansee.studio/">查看 FANSEE ↗</a></article>
+        <article class="flex min-h-96 flex-col bg-brand-paper p-8"><div class="flex justify-between font-mono text-xs text-brand-accent"><span>PERSONAL LAB</span><time>ONGOING</time></div><h3 class="mt-auto font-display text-[clamp(3rem,6vw,6rem)] uppercase">RikaiDev</h3><p>把未被好好解決的日常問題，做成可使用、檢驗與分享的開源工具。</p><a class="font-bold" href="https://github.com/RikaiDev">查看 RikaiDev ↗</a></article>
+      </div>
+    </section>
+
+    <section class="bg-amber-50 px-[max(clamp(1.25rem,4vw,4rem),calc((100vw-1240px)/2+clamp(1.25rem,4vw,4rem)))] py-[clamp(5rem,10vw,9rem)]" id="open-source">
+      <header class="mb-16 grid gap-8 lg:grid-cols-[1.4fr_.6fr] lg:items-end"><div><p class="font-mono text-xs font-bold text-brand-accent">03 / OPEN SOURCE</p><h2 class="max-w-4xl font-display text-[clamp(2.8rem,6vw,5.6rem)] leading-[.98] font-semibold uppercase">把能力公開，讓證據替我說話。</h2></div><p class="text-brand-ink/65">開源不是附錄，而是可重現的履歷。</p></header>
+      <div class="border-t-2 border-brand">
+        <a class="grid grid-cols-[40px_1fr] gap-4 border-b border-brand/20 py-6 lg:grid-cols-[60px_1fr_auto]" href="https://rikaidev.github.io/yomi/"><span class="font-mono text-xs text-brand-accent">01</span><div><h3 class="m-0 font-display text-3xl uppercase">yomi（読み）</h3><p class="m-0 text-brand-ink/65">本機 LINE MCP server</p></div><b class="col-start-2 font-mono text-xs lg:col-auto">TypeScript ↗</b></a>
+        <a class="grid grid-cols-[40px_1fr] gap-4 border-b border-brand/20 py-6 lg:grid-cols-[60px_1fr_auto]" href="https://github.com/RikaiDev/toki"><span class="font-mono text-xs text-brand-accent">02</span><div><h3 class="m-0 font-display text-3xl uppercase">toki</h3><p class="m-0 text-brand-ink/65">隱私優先的開發者時間追蹤</p></div><b class="col-start-2 font-mono text-xs lg:col-auto">Rust ↗</b></a>
+        <a class="grid grid-cols-[40px_1fr] gap-4 border-b border-brand/20 py-6 lg:grid-cols-[60px_1fr_auto]" href="https://huggingface.co/weemed/IlhaEmbed"><span class="font-mono text-xs text-brand-accent">03</span><div><h3 class="m-0 font-display text-3xl uppercase">IlhaEmbed</h3><p class="m-0 text-brand-ink/65">WeeMed 語言嵌入模型</p></div><b class="col-start-2 font-mono text-xs lg:col-auto">Hugging Face ↗</b></a>
+        <a class="grid grid-cols-[40px_1fr] gap-4 border-b border-brand/20 py-6 lg:grid-cols-[60px_1fr_auto]" href="https://pypi.org/project/mindar/"><span class="font-mono text-xs text-brand-accent">04</span><div><h3 class="m-0 font-display text-3xl uppercase">mindar</h3><p class="m-0 text-brand-ink/65">FANSEE LAB edge image recognition</p></div><b class="col-start-2 font-mono text-xs lg:col-auto">Python ↗</b></a>
+        <a class="grid grid-cols-[40px_1fr] gap-4 border-b border-brand/20 py-6 lg:grid-cols-[60px_1fr_auto]" href="https://github.com/gloomcheng/zh-hant.react.dev"><span class="font-mono text-xs text-brand-accent">05</span><div><h3 class="m-0 font-display text-3xl uppercase">zh-hant.react.dev</h3><p class="m-0 text-brand-ink/65">React 官方文件繁體中文翻譯</p></div><b class="col-start-2 font-mono text-xs lg:col-auto">TypeScript ↗</b></a>
+      </div>
+    </section>
+
+    <section class="px-[max(clamp(1.25rem,4vw,4rem),calc((100vw-1240px)/2+clamp(1.25rem,4vw,4rem)))] py-[clamp(5rem,10vw,9rem)]" id="evidence">
+      <header class="mb-16"><p class="font-mono text-xs font-bold text-brand-accent">04 / PUBLIC EVIDENCE</p><h2 class="max-w-4xl font-display text-[clamp(2.8rem,6vw,5.6rem)] leading-[.98] font-semibold uppercase">精選成果，而不是完整清單。</h2></header>
+      <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <article class="min-h-64 border border-brand p-8"><span class="font-mono text-xs text-brand-accent">PUBLICATION · 2024</span><h3 class="mt-12 font-display text-3xl uppercase">歐盟人工智慧法與生成式 AI 規範</h3><p>《國會季刊》52</p><a href="https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=5266&amp;pid=238792">閱讀資料 ↗</a></article>
+        <article class="min-h-64 border border-brand p-8"><span class="font-mono text-xs text-brand-accent">PUBLICATION · 2015</span><h3 class="mt-12 font-display text-3xl uppercase">Theory of Variable Fuzzy Sets for Artificial Emotions Prediction</h3><a href="https://doi.org/10.1155/2015/250506">DOI ↗</a></article>
+        <article class="min-h-64 border border-brand p-8"><span class="font-mono text-xs text-brand-accent">PRODUCER · 2015</span><h3 class="mt-12 font-display text-3xl uppercase">Palace, Deliberation, Horn, Manifestation</h3><p>Alexandre Rangel｜台中軟實力論壇</p><a href="https://www.youtube.com/watch?v=F42cdvNDxmg">觀看影片 ↗</a></article>
+        <article class="min-h-64 border border-brand p-8"><span class="font-mono text-xs text-brand-accent">PRESS · 2026</span><h3 class="mt-12 font-display text-3xl uppercase">從紙本到數位化：協助醫療院所加速轉型</h3><a href="https://weemed.ai/news/watch-magazine-276-weiren-hospital-digitalization-2026/">閱讀報導 ↗</a></article>
+      </div>
+    </section>
+
+    <section class="bg-brand-accent px-[max(clamp(1.25rem,4vw,4rem),calc((100vw-1240px)/2+clamp(1.25rem,4vw,4rem)))] py-[clamp(5rem,10vw,9rem)] text-white" id="connect"><p class="font-mono text-xs font-bold text-brand">05 / CONNECT</p><h2 class="max-w-5xl font-display text-[clamp(3rem,7vw,7rem)] leading-[.98] font-semibold uppercase">如果你也在處理<br>真正難的現場問題，我們可以談談。</h2><p class="my-8 text-xl">醫療數位轉型、FHIR、主權 AI、開源協作、教育科技與研究合作。</p><div class="flex gap-3"><a class="border-2 border-white px-5 py-3 font-bold" href="https://www.linkedin.com/in/gloomcheng/">LinkedIn</a><a class="border-2 border-white px-5 py-3 font-bold" href="https://github.com/gloomcheng">GitHub</a></div></section>
+  </main>
+  <footer class="flex flex-col justify-between gap-2 bg-[#031b1b] px-[clamp(1.25rem,4vw,4rem)] py-6 font-mono text-xs text-white sm:flex-row"><span>© 2026 gloomcheng · 鄭富源</span><span>Founder · Educator · Open-source Builder</span></footer>
+</body>
 </html>
