@@ -1,0 +1,49 @@
+{
+  "name": "seed-beast-c2-complete",
+  "version": 1,
+  "source": "assets/brand-source/seed-beast-c2/complete-rig-candidate/seed-beast-c2-rig-source.svg",
+  "identityAuthority": "../complete-master/seed-beast-c2-complete.png",
+  "viewBox": [
+    0,
+    0,
+    883,
+    1197
+  ],
+  "parts": {
+    "body": {
+      "selector": "#body",
+      "pivot": [
+        0.5,
+        0.58
+      ]
+    },
+    "leaf": {
+      "selector": "#leaf",
+      "pivot": [
+        0.8,
+        0.88
+      ]
+    },
+    "eyeLeft": {
+      "selector": "#eye-left",
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "eyeRight": {
+      "selector": "#eye-right",
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "mouth": {
+      "selector": "#mouth",
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    }
+  }
+}
