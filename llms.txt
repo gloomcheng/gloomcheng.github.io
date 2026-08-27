@@ -1,6 +1,6 @@
 # gloomcheng
 
-> gloomcheng 是 Healthcare AI 創業者、教育者與開源實作者，專注地端 AI、FHIR 健康資料流，以及把現場複雜問題轉成可部署、可驗證的產品。
+> gloomcheng 是跨足 Health AI、FHIR、文化內容、教育科技、人機互動與開源社群的創業者、教育者與實作者。
 
 Canonical profile: https://gloomcheng.github.io/
 Primary language: Traditional Chinese (zh-Hant-TW)
@@ -14,16 +14,10 @@ Primary language: Traditional Chinese (zh-Hant-TW)
 
 ## Focus areas
 
-- Sovereign Healthcare AI、FHIR 與醫療資訊系統
-- Hygieia：將紙本、試算表與既有系統資料接入同一條 FHIR 健康資料流
+- Health AI、FHIR 與醫療資訊系統
 - 文化內容、AR 與教育科技
 - AI agents、Human-AI Interaction 與開源軟體
 - Web engineering、課程與技術社群
-
-## Public outcomes
-
-- 公開報導記錄：大同醫院約 80% 健檢預約轉為線上、電話值機由 3 人減至 1 人、服務績效年增約 10%。
-- 產品主張：資料主權是產品；省下的人工作業是價值計量單位。
 
 ## RikaiDev
 
@@ -32,8 +26,6 @@ RikaiDev 是 gloomcheng 的個人開發實驗室，聚焦 developer tools、AI a
 - Yomi（読み）：供個人 LINE 帳號使用的本機 MCP server，讓本機 AI agent 讀取、回覆、傳圖與搜尋自己的 LINE 對話。它不是 LINE Official Account bot，也不是 LINE 官方產品。
 - Cortex：透過 MCP 為 coding agents 提供記憶與結構。
 - Mesen：persona 驅動、證據導向的行為式 UX 測試工具。
-- IlhaEmbed：由 WeeMed 發佈的語言嵌入模型。
-- mindar：由 FANSEE LAB 維護的 edge image recognition Python package。
 
 ## Authoritative links
 
