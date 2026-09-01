@@ -1,0 +1,41 @@
+---
+import { footnotes, type FootnoteCode } from '../data/footnotes'
+
+interface Props {
+  codes: FootnoteCode[]
+}
+
+const { codes }: Props = Astro.props
+---
+
+<section class="reference-ledger" aria-labelledby="reference-ledger-title">
+  <header class="reference-ledger-header">
+    <p>REFERENCES</p>
+    <div>
+      <h2 id="reference-ledger-title">註解與來源</h2>
+      <p>文中編號對應的履歷、報導與公開紀錄。</p>
+    </div>
+  </header>
+  <ol>
+    {codes.map((code) => {
+      const note = footnotes[code]
+      return (
+        <li id={`footnote-${code}`}>
+          <a
+            class="reference-code"
+            href={`#ref-${code}`}
+            aria-label={`回到引用 ${code}`}
+          >
+            {code}<span aria-hidden="true">↩</span>
+          </a>
+          <div class="reference-content">
+            <p class="reference-source">{note.source}</p>
+            <h3>{note.title}</h3>
+            <p>{note.description}</p>
+            <a class="reference-link" href={note.href}>查看完整資料 <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+      )
+    })}
+  </ol>
+</section>

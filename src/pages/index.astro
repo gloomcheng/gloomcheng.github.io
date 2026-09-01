@@ -1,26 +1,12 @@
 ---
 import "../styles/global.css";
-import profile from "../data/profile.json";
 import Footnote from "../components/Footnote.astro";
+import FootnoteList from "../components/FootnoteList.astro";
 import SeedBeastRig from "../components/SeedBeastRig.astro";
 const siteUrl = "https://gloomcheng.github.io/";
 const title = "gloomcheng｜鄭富源";
 const description =
   "從教科書編輯、文化科技到醫療資訊，鄭富源現在回頭看，才發現自己常被同一類問題吸引。";
-type ExperienceItem = {
-  org: string;
-  period: string;
-  role: string;
-  detail: string;
-};
-const experienceSection = profile.sections.find(
-  ({ key }) => key === "experience",
-);
-if (!experienceSection) throw new Error("profile.json 缺少 experience section");
-const experienceItems = experienceSection.items as unknown as ExperienceItem[];
-const flag = experienceItems.find(({ org }) => org.startsWith("旗立資訊"));
-if (!flag) throw new Error("profile.json 缺少旗立資訊經歷");
-const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"));
 ---
 
 <!doctype html>
@@ -57,7 +43,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
         人物特寫　2026.08
       </p><nav class="flex justify-end gap-5 text-sm font-bold">
         <a href="/blog">Blog</a>
-        <a href="/resume">完整履歷</a>
+        <a href="/resume">Resume</a>
       </nav>
     </header>
     <main id="top">
@@ -158,12 +144,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
                 坦白說，這不是做一張線上表單就會消失的問題。民眾選了日期，後面還有排程、報到、報告和追蹤；只要其中一段沒有接起來，工作就會換個地方繼續卡住。電話只是最先被大家聽見的地方。
               </p><p class="mb-6 max-w-[690px] text-lg leading-8">
                 後來，我們把預約流程搬到線上。根據 2026
-                年《看雜誌》的採訪資料，現在大約八成預約由民眾自己完成，電話值機從三個人減為一個人。電話沒有消失，而是留給真的需要人工協助的人。這件事沒有什麼很炫的技術，只是原本每天都很麻煩的事情，終於被好好做完了。<Footnote
-                  id="note-p01"
-                  code="P01"
-                  title="《看雜誌》第 276 期：從紙本到數位化"
-                  href="/resume#ref-p01"
-                />
+                年《看雜誌》的採訪資料，現在大約八成預約由民眾自己完成，電話值機從三個人減為一個人。電話沒有消失，而是留給真的需要人工協助的人。這件事沒有什麼很炫的技術，只是原本每天都很麻煩的事情，終於被好好做完了。<Footnote code="P01" />
               </p><blockquote
                 class="my-12 -mx-5 bg-seed-teal px-5 py-12 text-4xl leading-tight font-extrabold tracking-tight text-white md:-mx-7 md:px-7 md:py-16 md:text-6xl lg:-mx-16 lg:px-16"
               >
@@ -185,13 +166,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
               <p class="mb-4 text-sm font-bold tracking-[.11em] text-seed-teal">02　工作的起點</p><h2 class="mb-10 font-display text-4xl leading-tight font-bold tracking-tight md:text-6xl">不能只靠一個人記得</h2><p
                 class="text-xl leading-9 font-bold md:text-2xl"
               >
-                我的第一份工作是在旗立資訊擔任責任編輯，編撰國、高中計算機概論教科書。<Footnote
-                  id="note-e14"
-                  code="E14"
-                  title={flag.org}
-                  href="/resume#ref-e14"
-                  source="本人履歷"
-                />
+                我的第一份工作是在旗立資訊擔任責任編輯，編撰國、高中計算機概論教科書。<Footnote code="E14" />
               </p><p class="text-lg leading-8">
                 那時候，業務會把老師對教材的意見帶回來。有時是某一段寫得不清楚，有時是書上的說法和老師原本的理解不一樣。主管很保護編輯，希望大家專心把書寫好，所以這些第一線問題大多由她接住。
               </p><p class="text-lg leading-8">
@@ -210,13 +185,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
               </p><p class="text-lg leading-8">
                 那時我是個連 Linux 都不懂的菜鳥，英文也很差。主管要我架伺服器，我把英文手冊印出來，一個指令一個指令照著敲；只要系統反應不對，就只能格式化重灌再來一次。但正是因為 Linux 和伺服器軟體全都是開源的，讓一個窮學生只要願意花時間，就能拿到跟全世界工程師一樣的工具。我在家架起 FTP 和 BBS，第一次在技術裡找到自信。
               </p><p class="text-lg leading-8">
-                離開出版社後，我加入網絡行動科技（NETivism）擔任專案經理與工程師。<Footnote
-                  id="note-e10"
-                  code="E10"
-                  title={netivism?.org ?? "網絡行動科技"}
-                  href="/resume#ref-e10"
-                  source="本人履歷"
-                />在南部長大的我，原本習慣了傳統「當師傅要留一手（偷囥步）」的防備心理；但這間公司卻大方對外宣稱用開源架站，還出錢出力推廣社群、拉更多人加入。
+                離開出版社後，我加入網絡行動科技（NETivism）擔任專案經理與工程師。<Footnote code="E10" />在南部長大的我，原本習慣了傳統「當師傅要留一手（偷囥步）」的防備心理；但這間公司卻大方對外宣稱用開源架站，還出錢出力推廣社群、拉更多人加入。
               </p><p class="text-lg leading-8">
                 跟著做了幾年，我才徹底想通：開放底層的磚塊，給出去的是「信任」與「標準」；客戶真正需要買的，是幫他們把大樓蓋得穩固的架構能力。那幾年我在 COSCUP、ICOS、DrupalCamp 發表了大量演講。開源對我來說就是這樣一個舞台：你不需要很厲害才開始，而是先站上去、動手做，社群的友善會陪你變厲害。
               </p>
@@ -258,12 +227,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
                     都在裡面，但孩子不需要先學會那些名詞。
                   </p><p class="text-lg leading-8">
                     這條路也不是一開始就走對。我們先想進校園，後來才發現老師需要的不只有商品，還要有拿到課堂上就能用的教案。團隊當時做不到。轉向家長市場後，又發現內容必須持續更新，我們的資源還是跟不上。我在採訪裡講得很直接：「我們看得到市場，但沒有能力去應付。」後來
-                    FANSEE 才轉向文化館舍合作。<Footnote
-                      id="note-p03"
-                      code="P03"
-                      title="從 AR 繪本到 ESG 專案"
-                      href="/resume#ref-p03"
-                    />
+                    FANSEE 才轉向文化館舍合作。<Footnote code="P03" />
                   </p><p class="text-lg leading-8">
                     我自己其實是 old school
                     派，還是喜歡紙本。我後來比較在意的，不是用了哪一種載體，而是孩子有沒有真的進到故事裡。FANSEE 的幾次轉向也讓我看到另一個限制：只靠一個團隊把內容、工具和導入全部包起來，永遠會追不上現場。方法必須能被留下來，也必須讓別人接得走。
@@ -294,13 +258,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
                 <span class="font-mono">package registry</span
                 >。至少別人可以直接看程式碼、版本與 <span class="font-mono"
                   >issue</span
-                >，自己判斷值不值得用。<Footnote
-                  id="note-o"
-                  code="O01–O08"
-                  title="開源貢獻與 RikaiDev"
-                  href="/resume#opensource-records"
-                  source="公開紀錄"
-                />
+                >，自己判斷值不值得用。<Footnote code="O01–O08" />
               </p><p class="text-lg leading-8">
                 我自己不覺得把模型或工具放出來，就等於把優勢送人。開放底層的磚塊，給出去的是信任：別人可以先看、先用，再決定要不要把下一步交給你。真正困難的從來不是公開程式碼，而是長時間把東西做好，讓人相信你會繼續負責。
               </p><div
@@ -332,6 +290,7 @@ const netivism = experienceItems.find(({ org }) => org.includes("網絡行動"))
             </section>
           </div>
         </div>
+        <FootnoteList codes={["P01", "E14", "E10", "P03", "O01–O08"]} />
         <section class="w-full bg-seed-ink px-5 py-20 text-seed-paper sm:px-8 md:py-24 lg:px-12 xl:px-[max(48px,calc((100vw-1240px)/2))] xl:py-28">
           <div class="mx-auto max-w-[1100px]">
             <p class="mb-4 text-sm font-bold tracking-[.11em] text-seed-orange">08　如果你帶著問題來</p>
