@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footnote from "../components/Footnote.astro";
 import FootnoteList from "../components/FootnoteList.astro";
 import SeedBeastRig from "../components/SeedBeastRig.astro";
+import SeedBeastHeroPanel from "../components/SeedBeastHeroPanel.astro";
 const siteUrl = "https://gloomcheng.github.io/";
 const title = "gloomcheng｜鄭富源";
 const description =
@@ -49,13 +50,12 @@ const description =
     <main id="top">
       <article>
         <header
-          class="relative grid overflow-hidden px-5 py-6 before:absolute before:inset-y-0 before:right-[-18%] before:left-[58%] before:hidden before:origin-bottom before:-skew-x-6 before:bg-seed-mint md:min-h-[calc(100dvh-80px)] md:grid-rows-[auto_1fr_auto] md:px-[max(28px,calc((100vw-1240px)/2))] md:py-11 md:before:block"
+          class="seed-hero-shell relative grid overflow-hidden px-5 py-6 md:min-h-[calc(100dvh-80px)] md:grid-rows-[auto_1fr_auto] md:px-[max(28px,calc((100vw-1240px)/2))] md:py-11"
         >
           <div
             class="relative z-10 flex justify-between text-sm font-bold tracking-[.09em] max-md:block"
           >
-            <span class="block">FIELD NOTES 01</span><span class="block"
-              >鄭富源／Fu-Yuan Cheng</span>
+            <span class="block">FIELD NOTES 01</span>
           </div>
           <div
             class="relative z-10 w-full self-start pt-[6vh] md:w-[68vw] md:max-w-[790px] md:self-center md:pt-0"
@@ -74,18 +74,7 @@ const description =
               自述整理／gloomcheng　資料核對／公開紀錄與本人履歷
             </p>
           </div>
-          <div
-            class="relative z-0 mt-8 h-80 w-full overflow-hidden bg-seed-mint md:absolute md:inset-y-0 md:right-0 md:mt-0 md:h-auto md:w-[44vw] md:bg-transparent md:[clip-path:polygon(8%_0,100%_0,100%_100%,0_100%)]"
-            aria-hidden="true"
-          >
-            <img
-              class="h-full w-full object-contain object-right-bottom"
-              src="/assets/brand/seed-beast-c2/complete-rig/seed-beast-c2-rig.svg"
-              alt=""
-              width="883"
-              height="1197"
-            />
-          </div><p
+          <SeedBeastHeroPanel /><p
             class="relative z-10 m-0 flex w-full justify-between border-t border-seed-ink pt-3 text-sm font-bold md:w-[52%]"
           >
             往下讀 <span>↓</span>

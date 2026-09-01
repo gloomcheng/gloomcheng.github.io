@@ -120,9 +120,12 @@ const records = output
     }
   })
 
-const aliases = new Map(
-  records.map(({ legacyPath }) => [legacyPath, `/blog${legacyPath}/`]),
-)
+const aliases = new Map([['/technical', '/blog/']])
+for (const { legacyPath, nid } of records) {
+  const destination = `/blog${legacyPath}/`
+  aliases.set(legacyPath, destination)
+  aliases.set(`/node/${nid}`, destination)
+}
 const mediaPaths = new Set()
 const missingMedia = new Set()
 
@@ -196,6 +199,20 @@ const decodeEntities = (value) =>
           entity
         ],
     )
+
+const rewriteMarkdownLinks = (value) =>
+  value
+    .split(/(```[\s\S]*?```)/g)
+    .map((segment, index) =>
+      index % 2 === 1
+        ? segment
+        : segment.replace(
+            /(!?\[(?:[^\[\]]|\[[^\]]*\])*\]\()([^\s)]+)([^)]*\))/g,
+            (_, opening, url, closing) =>
+              `${opening}${rewriteUrl(url)}${closing}`,
+          ),
+    )
+    .join('')
 
 const plainText = (html) =>
   decodeEntities(
@@ -284,9 +301,12 @@ for (const record of records) {
       }),
     },
   }).trim()
-  const safeBody = sanitizedBody.replace(
-    /(```[^\r\n]*\r?\n)([\s\S]*?)(\r?\n```)/g,
-    (_, opening, code, closing) => `${opening}${decodeEntities(code)}${closing}`,
+  const safeBody = rewriteMarkdownLinks(
+    sanitizedBody.replace(
+      /(```[^\r\n]*\r?\n)([\s\S]*?)(\r?\n```)/g,
+      (_, opening, code, closing) =>
+        `${opening}${decodeEntities(code)}${closing}`,
+    ),
   )
 
   const descriptionSource = record.summary || safeBody || record.title

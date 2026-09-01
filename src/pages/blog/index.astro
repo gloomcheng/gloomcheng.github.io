@@ -1,5 +1,6 @@
 ---
 import ArchiveList from '../../components/ArchiveList.astro'
+import SeedBeastHeroPanel from '../../components/SeedBeastHeroPanel.astro'
 import BlogLayout from '../../layouts/BlogLayout.astro'
 import {
   blogPath,
@@ -14,7 +15,7 @@ const description =
 ---
 
 <BlogLayout title="Blog" description={description} canonicalPath="/blog/">
-  <header class="blog-hero">
+  <header class="seed-hero-shell blog-hero">
     <div class="blog-hero-copy">
       <p class="blog-kicker">FIELD NOTES 02　／　2011—2023</p>
       <h1>以前寫下來的，<br />繼續留在這裡</h1>
@@ -23,14 +24,7 @@ const description =
       </p>
       <p class="blog-archive-count"><strong>{posts.length}</strong><span>篇舊站文章</span></p>
     </div>
-    <div class="blog-hero-mark" aria-hidden="true">
-      <img
-        src="/assets/brand/seed-beast-c2/complete-rig/seed-beast-c2-rig.svg"
-        alt=""
-        width="883"
-        height="1197"
-      />
-    </div>
+    <SeedBeastHeroPanel />
   </header>
 
   <section class="blog-latest" aria-labelledby="latest-title">
