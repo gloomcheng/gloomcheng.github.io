@@ -1,0 +1,170 @@
+---
+import profile from "../data/profile.json";
+
+type ReferenceItem = {
+  name?: string;
+  title?: string;
+  org?: string;
+  school?: string;
+  outlet?: string;
+  period?: string;
+  year?: string;
+  date?: string;
+  role?: string;
+  brand?: string;
+  degree?: string;
+  authors?: string;
+  venue?: string;
+  funder?: string;
+  runtime?: string;
+  format?: string;
+  lang?: string;
+  group?: string;
+  detail?: string;
+  note?: string;
+  metrics?: string;
+  targets?: string;
+  expires?: string;
+  url?: string;
+  repo_url?: string;
+  package_url?: string;
+};
+
+const { compact = false } = Astro.props;
+const compactKeys = [
+  "venture",
+  "experience",
+  "education",
+  "publication",
+  "project_work",
+  "talk",
+  "oss",
+  "rikaidev",
+];
+const keys = compact ? compactKeys : profile.sections.map(({ key }) => key);
+const prefixes: Record<string, string> = {
+  venture: "V",
+  experience: "E",
+  education: "ED",
+  publication: "B",
+  project_work: "W",
+  talk: "T",
+  oss: "O",
+  rikaidev: "R",
+  model: "M",
+  cert: "C",
+  training: "TR",
+  product: "PR",
+  press: "P",
+};
+const title = (item: ReferenceItem) =>
+  item.name ?? item.title ?? item.org ?? item.school ?? item.outlet;
+const period = (item: ReferenceItem) =>
+  item.period ?? item.year ?? item.date ?? "";
+const meta = (item: ReferenceItem) =>
+  [
+    item.role,
+    item.brand,
+    item.degree,
+    item.authors,
+    item.venue,
+    item.funder,
+    item.runtime,
+    item.format,
+    item.lang,
+    item.group,
+  ]
+    .filter(Boolean)
+    .join("／");
+const details = (item: ReferenceItem) =>
+  [
+    item.detail,
+    item.note,
+    item.metrics,
+    item.targets,
+    item.expires && `有效期限：${item.expires}`,
+  ].filter(Boolean);
+const url = (item: ReferenceItem) =>
+  item.url ?? item.repo_url ?? item.package_url;
+
+const itemMap: Record<string, { code: string; title: string }> = {};
+profile.sections.forEach((section) => {
+  section.items.forEach((rawItem, index) => {
+    const item = rawItem as unknown as ReferenceItem;
+    const code = `${prefixes[section.key] ?? section.key.toUpperCase()}${String(index + 1).padStart(2, "0")}`;
+    const t = title(item) || "";
+    itemMap[code] = { code, title: t };
+  });
+});
+---
+
+{
+  profile.sections
+    .filter(({ key }) => keys.includes(key))
+    .map((section) => (
+      <section
+        class="grid gap-8 border-b border-seed-ink/20 py-12 md:grid-cols-[180px_1fr] md:gap-16 md:py-16 print:block print:break-inside-avoid"
+        id={section.key === "oss" ? "opensource-records" : section.key}
+      >
+        <h2 class="m-0 font-display text-2xl font-bold md:sticky md:top-8 md:self-start">
+          {section.label}
+        </h2>
+        <ol class="m-0 list-none p-0">
+          {section.items.map((rawItem, index: number) => {
+            const item = rawItem as unknown as ReferenceItem & { related?: string[] };
+            const code = `${prefixes[section.key] ?? section.key.toUpperCase()}${String(index + 1).padStart(2, "0")}`;
+            return (
+              <li
+                class="grid grid-cols-[64px_1fr] gap-4 border-b border-seed-ink/20 pb-7 not-last:mb-7 last:border-0 md:grid-cols-[90px_1fr] md:gap-6"
+                id={`ref-${code.toLowerCase()}`}
+              >
+                <span class="text-sm leading-6 font-extrabold text-seed-orange">
+                  {code}
+                  <br />
+                  {period(item)}
+                </span>
+                <div>
+                  <h3 class="m-0 font-display text-xl leading-7 font-bold">
+                    {title(item)}
+                  </h3>
+                  {meta(item) && (
+                    <p class="my-1 text-base leading-7 text-seed-ink/65">
+                      {meta(item)}
+                    </p>
+                  )}
+                  {details(item).map((line) => (
+                    <p class="my-1 text-base leading-7">{line}</p>
+                  ))}
+                  {item.related && item.related.length > 0 && (
+                    <div class="mt-2.5 flex flex-wrap items-center gap-1.5 text-xs">
+                      <span class="font-bold text-seed-ink/60">關聯資料：</span>
+                      {item.related.map((refCode) => {
+                        const target = itemMap[refCode.toUpperCase()];
+                        const label = target ? `${refCode} ${target.title}` : refCode;
+                        return (
+                          <a
+                            href={`#ref-${refCode.toLowerCase()}`}
+                            class="inline-flex items-center rounded bg-seed-ink/5 px-2 py-0.5 text-xs font-medium text-seed-ink/85 hover:bg-seed-orange/15 hover:text-seed-orange transition-colors"
+                          >
+                            {label}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  )}
+                  {url(item) && (
+                    <p class="mt-2 text-sm font-bold">
+                      公開來源　
+                      <a class="underline underline-offset-4 hover:text-seed-orange transition-colors" href={url(item)} target="_blank" rel="noopener noreferrer">
+                        查看 ↗
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    ))
+}

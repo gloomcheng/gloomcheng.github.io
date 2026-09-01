@@ -1,0 +1,34 @@
+{
+  "source": "public/assets/brand/seed-beast-c2/complete-master/seed-beast-c2-complete.png",
+  "source_sha256": "23922727e7d95ac691e8f297067bc4c21630ea5381a0fdbaa84953e9ff03e29e",
+  "prepared_size": [
+    1098,
+    1236
+  ],
+  "svg": "assets/brand-source/seed-beast-c2/complete-vector-candidate/traced-candidate.svg",
+  "command": [
+    "vtracer",
+    "assets/brand-source/seed-beast-c2/complete-vector-candidate/prepared-source.png",
+    "assets/brand-source/seed-beast-c2/complete-vector-candidate/traced-candidate.svg",
+    "--preset",
+    "poster",
+    "--mode",
+    "spline",
+    "--hierarchical",
+    "cutout",
+    "--filter-speckle",
+    "4",
+    "--simplify",
+    "1.2",
+    "--path-precision",
+    "2",
+    "--optimize",
+    "1",
+    "--palette",
+    "#FF650F,#006A78"
+  ],
+  "silhouette_iou": 0.979857,
+  "normalized_luma_difference": 0.023565,
+  "automatic_gate": "pass",
+  "requires_visual_review": true
+}

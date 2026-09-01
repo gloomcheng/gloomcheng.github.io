@@ -1,0 +1,65 @@
+---
+import ArchiveList from '../../components/ArchiveList.astro'
+import BlogLayout from '../../layouts/BlogLayout.astro'
+import {
+  blogPath,
+  formatBlogDate,
+  getBlogPosts,
+} from '../../lib/blog'
+
+const posts = await getBlogPosts()
+const latest = posts.slice(0, 8)
+const description =
+  '從 tayanswa「Culture is Life」保存下來的文章，依原始日期與網址重新整理。'
+---
+
+<BlogLayout title="Blog" description={description} canonicalPath="/blog/">
+  <header class="blog-hero">
+    <div class="blog-hero-copy">
+      <p class="blog-kicker">FIELD NOTES 02　／　2011—2023</p>
+      <h1>以前寫下來的，<br />繼續留在這裡</h1>
+      <p class="blog-lede">
+        這裡收錄舊站 tayanswa「Culture is Life」留下的文章。沒有把它們改寫成年輕時就懂得一切的樣子；日期、原始網址與原來的語氣都保留下來。
+      </p>
+    </div>
+    <div class="blog-hero-mark" aria-hidden="true">
+      <span>{posts.length}</span>
+      <p>ARCHIVED<br />NOTES</p>
+      <img
+        src="/assets/brand/seed-beast-c2/complete-rig/seed-beast-c2-rig.svg"
+        alt=""
+        width="883"
+        height="1197"
+      />
+    </div>
+  </header>
+
+  <section class="blog-latest" aria-labelledby="latest-title">
+    <header>
+      <p>RECENT FROM THE ARCHIVE</p>
+      <h2 id="latest-title">最近寫下的八篇</h2>
+    </header>
+    <ol>
+      {latest.map((post, index) => (
+        <li>
+          <a href={blogPath(post.data.legacyPath)}>
+            <span class="blog-latest-number">{String(index + 1).padStart(2, '0')}</span>
+            <span class="blog-latest-title">{post.data.title}</span>
+            <span class="blog-latest-meta">
+              {formatBlogDate(post.data.publishedAt)}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="archive" class="blog-archive" aria-labelledby="archive-title">
+    <header class="blog-archive-intro">
+      <p>COMPLETE ARCHIVE</p>
+      <h2 id="archive-title">全部文章</h2>
+      <p>由近到遠排列。年月是這份舊站最誠實、也最簡單的索引。</p>
+    </header>
+    <ArchiveList posts={posts} />
+  </section>
+</BlogLayout>

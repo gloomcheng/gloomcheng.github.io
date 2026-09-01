@@ -1,6 +1,6 @@
 # gloomcheng.github.io
 
-Public founder profile for [gloomcheng](https://gloomcheng.github.io/): Healthcare AI, FHIR, education technology, and open-source work.
+Public founder profile and writing archive for [gloomcheng](https://gloomcheng.github.io/): healthcare AI, FHIR, education technology, open source and the migrated tayanswa「Culture is Life」blog.
 
 ## Local development
 
@@ -9,19 +9,29 @@ bun install
 bun run dev
 ```
 
-Serve the repository root with any static file server. The published site remains plain HTML and CSS; Tailwind CSS is used only as the build-time design system.
+Useful routes:
 
-## Production build
+- `/` — personal feature
+- `/blog/` — one chronological archive; no reader-facing categories
+- `/resume/` — complete Traditional Chinese profile
+- `/resume/en/` — English profile
+
+## Verification
 
 ```bash
-bun run build
+bun run check
 ```
 
-Commit both `src/input.css` and the generated `styles.css` so GitHub Pages can serve the site without a runtime build step.
+The repository owns the Astro source and GitHub Pages workflow. A push to `main` installs dependencies, builds `dist/` and deploys the Pages artifact; generated `dist/` files are not committed.
 
-## Content principles
+## tayanswa migration
 
-- Lead with a clear founder thesis and evidence, not a complete CV dump.
-- Treat open-source releases as reproducible public evidence.
-- Use ELI5 diagrams as an orientation layer; keep claims linked to primary sources.
-- Keep the personal profile focused on identity and work. Hygieia's living roadmap belongs in the Hygieia repository.
+The raw Drupal tree and SQL remain outside this public repository. `scripts/import-tayanswa.mjs` reads an already restored local MariaDB container and generates sanitized Markdown plus referenced public media.
+
+```bash
+TAYANSWA_ARCHIVE_DIR=/path/to/private/tayanswa \
+TAYANSWA_DB_PASSWORD=temporary-local-password \
+bun run import:tayanswa
+```
+
+The generated posts preserve original titles, dates, paths and tags for provenance. The public interface intentionally presents one chronological Blog rather than exposing the old Drupal content taxonomy.

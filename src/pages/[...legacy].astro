@@ -1,0 +1,31 @@
+---
+import { blogPath, getBlogPosts } from '../lib/blog'
+
+export async function getStaticPaths() {
+  return (await getBlogPosts()).map((post) => ({
+    params: { legacy: post.data.legacyPath.replace(/^\//, '') },
+    props: { title: post.data.title, destination: blogPath(post.data.legacyPath) },
+  }))
+}
+
+const { title, destination } = Astro.props
+const canonical = new URL(destination, 'https://gloomcheng.github.io').toString()
+---
+
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}｜文章已搬家</title>
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <link rel="canonical" href={canonical} />
+    <script is:inline define:vars={{ destination }}>
+      window.location.replace(destination + window.location.hash)
+    </script>
+  </head>
+  <body style="font-family: system-ui, sans-serif; padding: 2rem; background: #fff4df; color: #101820;">
+    <p>文章已搬到 <a href={destination}>{destination}</a>。</p>
+  </body>
+</html>

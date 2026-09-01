@@ -1,0 +1,45 @@
+---
+import {
+  type BlogPost,
+  blogPath,
+  blogYear,
+  formatBlogDate,
+} from '../lib/blog'
+
+interface Props {
+  posts: BlogPost[]
+}
+
+const { posts }: Props = Astro.props
+const byYear = posts.reduce<Map<string, BlogPost[]>>(
+  (groups: Map<string, BlogPost[]>, post: BlogPost) => {
+    const year = blogYear(post.data.publishedAt)
+    groups.set(year, [...(groups.get(year) ?? []), post])
+    return groups
+  },
+  new Map(),
+)
+---
+
+<div class="archive-years">
+  {[...byYear.entries()].map(([year, yearPosts]) => (
+    <section id={`year-${year}`} class="archive-year scroll-mt-8" aria-labelledby={`year-title-${year}`}>
+      <header class="archive-year-heading">
+        <h2 id={`year-title-${year}`}>{year}</h2>
+        <span>{yearPosts.length.toString().padStart(2, '0')} 篇</span>
+      </header>
+      <ol class="archive-list">
+        {yearPosts.map((post: BlogPost) => (
+          <li>
+            <a href={blogPath(post.data.legacyPath)}>
+              <time datetime={post.data.publishedAt.toISOString()}>
+                {formatBlogDate(post.data.publishedAt).slice(5)}
+              </time>
+              <span class="archive-title">{post.data.title}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</div>

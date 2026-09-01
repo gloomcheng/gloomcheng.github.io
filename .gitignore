@@ -1,4 +1,8 @@
 node_modules/
+dist/
+.astro/
+.playwright-cli/
+.font-subset-corpus.txt
 .DS_Store
 ip-candidates/
 assets/brand/seed-beast-c2/vector-candidate/

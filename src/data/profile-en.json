@@ -1,0 +1,377 @@
+{
+  "person": {
+    "handle": "gloomcheng",
+    "name": "Fu-Yuan Cheng",
+    "tagline": "Bridging Culture, Education, and Healthcare with Software Architecture",
+    "title": "Founder & CEO, WeeMed AI · Founder & CEO, FANSEE Co., Ltd.",
+    "subtitle": "Ph.D. Candidate, NYUST",
+    "summary": "Fu-Yuan Cheng (gloomcheng) is an entrepreneur, software architect, and educator. He is currently a Ph.D. candidate at the Graduate School of Engineering Science and Technology, National Yunlin University of Science and Technology (NYUST). He serves as Founder & CEO of WeeMed AI, Founder & CEO of FANSEE Co., Ltd., and Founder & CTO of ZhèLâng Co., Ltd. His work focuses on healthcare information standards (SMART on FHIR), augmented reality (AR) interactive education, and the open-source community."
+  },
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/gloomcheng"
+    },
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=j3zLzo0AAAAJ"
+    },
+    {
+      "label": "Hugging Face",
+      "url": "https://huggingface.co/weemed"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/gloomcheng/"
+    },
+    {
+      "label": "WeeMed AI",
+      "url": "https://weemed.ai/"
+    },
+    {
+      "label": "FANSEE",
+      "url": "https://fansee.studio/"
+    }
+  ],
+  "sections": [
+    {
+      "key": "venture",
+      "label": "Ventures & Companies",
+      "items": [
+        {
+          "period": "2021–Pres.",
+          "org": "WeeMed AI (WeeMed Technology Co., Ltd.)",
+          "role": "Founder & CEO",
+          "detail": "FHIR-first healthcare Vertical AI platform (Hygieia), returning clinical focus to patient care. Encompasses clinical decision support, Breeze-ASR-26 medical speech recognition models, SMART on FHIR interoperability pipelines, and operational systems (Hi-Checkup, Hi-Care, Hi-Work, Hi-Hope, Hi-Mate) deployed across regional hospital networks (Kaohsiung Medical University health system) and community clinics.",
+          "url": "https://weemed.ai/",
+          "related": ["PR01", "M01", "M02", "P01", "P02"]
+        },
+        {
+          "period": "2019–Pres.",
+          "org": "FANSEE Co., Ltd.",
+          "role": "Founder & CEO",
+          "detail": "Interactive AR educational toys, digital theater boxes, and creative storytelling platforms. Creator of the 'Picture & Fairytale' AR theater box (recognized by Taiwan's national Golden Tripod Awards) with folklore and indigenous language editions; partnered with libraries and enterprises for cultural-tech interactive exhibitions.",
+          "url": "https://fansee.studio/",
+          "related": ["PR02", "P03", "P05"]
+        },
+        {
+          "period": "2013–Pres.",
+          "org": "ZhèLâng Co., Ltd.",
+          "role": "Founder & CTO",
+          "detail": "Digital production house founded on the open-source ethos of 'all for one, one for all' (ZhèLâng). Engineered custom web platforms, cloud architecture, and enterprise software. Originated the online health management scheduling system with Kaohsiung Municipal Tatung Hospital that laid the technical foundation for subsequent healthcare automation.",
+          "related": ["PR01", "P01"]
+        }
+      ]
+    },
+    {
+      "key": "experience",
+      "label": "Work & Teaching Experience",
+      "items": [
+        {
+          "period": "2026–Pres.",
+          "org": "Providence University — Department of Artificial Intelligence Applications",
+          "role": "Adjunct Lecturer",
+          "detail": "Appointed from 2026 (Academic Year 115-1); teaching practical courses in AI applications, web systems, data workflows, and human factors information design."
+        },
+        {
+          "period": "2016–Pres.",
+          "org": "National Yunlin University of Science and Technology (NYUST) — Department of Computer Science & Information Engineering",
+          "role": "Adjunct Lecturer",
+          "detail": "Teaching Web Programming (104-2, 105-1, 105-2, 106-1, 113-1, 114-1, 115-1) and Front-end Web Design & Development (106-2, 112-2, 113-2, 114-2)."
+        },
+        {
+          "period": "2020–Pres.",
+          "org": "Philosophy Medium",
+          "role": "Senior Web Engineer",
+          "detail": "Digital platform architecture, web performance optimization, and content management systems."
+        },
+        {
+          "period": "2025",
+          "org": "Siziwan Education Foundation",
+          "role": "Digital Youth T-Ambassador Instructor",
+          "detail": "Mentoring student teams on AR gamification, RAG AI assistants, and enterprise digital implementation."
+        },
+        {
+          "period": "2024",
+          "org": "Kaohsiung Social Enterprise Association",
+          "role": "Digital Youth T-Ambassador Instructor",
+          "detail": "Mentoring on AR digital theater, WebAR guided tours, and interactive digital art."
+        },
+        {
+          "period": "2016–2017",
+          "org": "Shuidui Elementary School",
+          "role": "Maker Club Lead Instructor",
+          "detail": "Taught Scratch programming, hand-drawn character design, 3D printing, and developed the location-based iBeacon app 'Shuidui GET!' with student-drawn creatures."
+        },
+        {
+          "period": "2021",
+          "org": "Shuidui Elementary School",
+          "role": "Faculty Workshop Lecturer",
+          "detail": "Conducted teacher training on maker curriculum and creative coding tools."
+        },
+        {
+          "period": "2017–2018",
+          "org": "National Formosa University (NFU) — Department of Multimedia Design",
+          "role": "Adjunct Lecturer",
+          "detail": "Taught Interactive Multimedia Design, Human-Computer Interface Design, and Digital Art."
+        },
+        {
+          "period": "2016–2018",
+          "org": "National Yunlin University of Science and Technology (NYUST) — Department of Digital Media Design",
+          "role": "Adjunct Lecturer",
+          "detail": "Taught Website Planning & Design."
+        },
+        {
+          "period": "2015–2016",
+          "org": "Taiwan BigData Inc.",
+          "role": "Systems Engineer",
+          "detail": "System architecture planning, infrastructure automation, and DevOps implementation."
+        },
+        {
+          "period": "2012–2015",
+          "org": "NETivism",
+          "role": "Project Engineer",
+          "detail": "Open-source CMS (Drupal) solution architecture, nonprofit CRM systems, and localization module development."
+        },
+        {
+          "period": "2008–2012",
+          "org": "Shu-Te University — Department of Information Management",
+          "role": "Adjunct Lecturer",
+          "detail": "Taught Introduction to Computer Science, Enterprise Network Planning, Knowledge Management, and Case Studies in Management Information Systems."
+        },
+        {
+          "period": "2007–2010",
+          "org": "Flag Publishing Co., Ltd.",
+          "role": "Commissioning Editor",
+          "detail": "Authored and edited computer science textbooks and pedagogical materials for vocational high schools and colleges across Taiwan."
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "items": [
+        {
+          "period": "2022–Pres.",
+          "school": "National Yunlin University of Science and Technology (NYUST)",
+          "degree": "Ph.D. Candidate, Graduate School of Engineering Science and Technology",
+          "detail": "Research focus: Human-Computer Interaction, Healthcare Data Standards, Applied Machine Learning."
+        },
+        {
+          "period": "2012–2017",
+          "school": "National Yunlin University of Science and Technology (NYUST)",
+          "degree": "Doctoral Program in Design (Coursework Completed)",
+          "detail": "Research focus: Digital Media Design, Interaction Design, Cultural Informatics."
+        },
+        {
+          "period": "2003–2006",
+          "school": "Shu-Te University",
+          "degree": "M.S. in Information Management",
+          "detail": "Master's Thesis in Web Information Systems and User Interface Design."
+        },
+        {
+          "period": "1999–2003",
+          "school": "Shu-Te University",
+          "degree": "B.S. in Information Management",
+          "detail": "Undergraduate Studies in Computer Science, Database Management, and Network Systems."
+        }
+      ]
+    },
+    {
+      "key": "talk",
+      "label": "Conference Talks & Keynotes",
+      "items": [
+        {
+          "date": "2025-11",
+          "title": "AI Computing in Education: Case Studies and Future Outlook",
+          "venue": "HolonIQ by QS 2025 Taiwan EdTech 50 Forum | Taipei World Trade Center",
+          "note": "Panelist; Commissioned by METAEDU / Ministry of Digital Affairs."
+        },
+        {
+          "date": "2025-06",
+          "title": "Characters Coming to Life: How AI Helps Children Tell Cultural Stories",
+          "venue": "2025 AIA Summer Forum | National Cheng Kung University",
+          "url": "https://workshop202506.aiacademy.tw",
+          "note": "Organized by Taiwan AI Academy (AIA)."
+        },
+        {
+          "date": "2018-03",
+          "title": "Virtual Reality in Education: Current State, Industry Applications, and Career Outlook",
+          "venue": "Shu-Te University"
+        },
+        {
+          "date": "2014-08",
+          "title": "Building Web Applications with Drupal 8 Core Architecture",
+          "venue": "COSCUP 2014 | Academia Sinica",
+          "url": "https://www.youtube.com/watch?v=t2gcFI4fe40"
+        },
+        {
+          "date": "2013-11",
+          "title": "Integrating Open Source Tools into Enterprise and Social Workflows",
+          "venue": "ICOS 2013 (International Conference on Open Source)"
+        },
+        {
+          "date": "2013-08",
+          "title": "Open Source as a Stage: Social Enterprises and Collaborative Development",
+          "venue": "COSCUP 2013 | Academia Sinica"
+        },
+        {
+          "date": "2012-10",
+          "title": "Drupal Commerce Localization and Payment Integration in Taiwan",
+          "venue": "DrupalCamp Taipei 2012",
+          "url": "https://www.drupal.org/project/addressfield_tw"
+        }
+      ]
+    },
+    {
+      "key": "publication",
+      "label": "Academic Publications & Books",
+      "items": [
+        {
+          "year": "2015",
+          "title": "Interactive Digital Media and Cultural Heritage Preservation: Case Studies in Taiwan",
+          "venue": "Journal of Applied Science and Engineering / Conference Proceedings",
+          "url": "https://doi.org/10.1155/2015/250506",
+          "note": "Indexed in Google Scholar & Academic Databases."
+        },
+        {
+          "year": "2014",
+          "title": "Design Strategies for Immersive Cultural Learning in Elementary Education",
+          "venue": "Routledge Publishing / Academic Book Chapter",
+          "url": "https://www.routledge.com/product/isbn/9781138001176"
+        },
+        {
+          "year": "2008–2010",
+          "title": "Computer Science and Web Programming Curriculum Series (5+ Textbooks)",
+          "venue": "Flag Publishing Co., Ltd.",
+          "note": "Standard CS curriculum textbooks widely adopted by vocational high schools across Taiwan."
+        }
+      ]
+    },
+    {
+      "key": "oss",
+      "label": "Open Source Contributions",
+      "items": [
+        {
+          "name": "RikaiDev Open Source Toolchain",
+          "role": "Creator & Maintainer",
+          "detail": "Developer toolchain: toki (time tracking), kaido (ops coach), mesen (UX monitoring), cortex (knowledge graph MCP), mimamori (communication bot), AII, yomi.",
+          "url": "https://github.com/RikaiDev"
+        },
+        {
+          "name": "Drupal Community & Module Maintenance (Drupal.org)",
+          "role": "Module Maintainer & Contributor",
+          "detail": "Active for over 16 years. Maintained open-source modules including Address Field Taiwan (Taiwan postal formats), Every8d SMS Gateway, Editor.md, and Locale Fix, along with contributions across core and community issues.",
+          "url": "https://www.drupal.org/u/gloomcheng"
+        },
+        {
+          "name": "React Documentation (Traditional Chinese Localization)",
+          "role": "Core Translation Contributor",
+          "detail": "Participated in the official Traditional Chinese localization of react.dev.",
+          "url": "https://github.com/gloomcheng/zh-hant.react.dev"
+        }
+      ]
+    },
+    {
+      "key": "model",
+      "label": "Model Releases (WeeMed AI)",
+      "items": [
+        {
+          "name": "IlhaEmbed (Clinical Semantic Embeddings)",
+          "role": "Research & Engineering Output from WeeMed AI",
+          "detail": "Taiwanese clinical semantic embedding model tailored for local clinical terminology, code-switching, and medical notes (WeeMed AI Research Output).",
+          "url": "https://huggingface.co/weemed",
+          "related": ["V01", "PR01"]
+        },
+        {
+          "name": "Breeze-ASR-26 (CT2 / GGML / ONNX)",
+          "role": "Research & Engineering Output from WeeMed AI",
+          "detail": "Medical and bilingual conversational speech recognition models converted and optimized for CTranslate2, GGML, and ONNX runtimes (WeeMed AI Engineering Output).",
+          "url": "https://huggingface.co/weemed",
+          "related": ["V01", "PR01"]
+        }
+      ]
+    },
+    {
+      "key": "product",
+      "label": "Products & Systems",
+      "items": [
+        {
+          "name": "WeeMed Intelligent Healthcare & Care Systems (Hi-Series)",
+          "role": "WeeMed AI",
+          "detail": "Comprehensive healthcare platform including Hi-Checkup (health screening management & smart scheduling), Hi-Care (community chronic care & tracking), Hi-Work (workplace occupational health), Hi-Hope (WHO ICOPE senior functional assessment), and Hi-Mate (smart medication analysis). Built on SMART on FHIR architecture for seamless EHR and National Health Insurance passbook integration.",
+          "url": "https://weemed.ai/",
+          "related": ["V01", "V03", "M01", "P01", "P02"]
+        },
+        {
+          "name": "FANSEE Interactive EdTech & Cultural Technology Series",
+          "role": "FANSEE Co., Ltd.",
+          "detail": "EdTech product suite including 'Picture & Fairytale' AR theater box (recognized by Taiwan's Golden Tripod Awards, featuring folk tales and indigenous language editions) and Talkie AI (interactive conversational English practice).",
+          "url": "https://fansee.studio/",
+          "related": ["V02", "P03", "P05"]
+        }
+      ]
+    },
+    {
+      "key": "cert",
+      "label": "Certifications & Training",
+      "items": [
+        {
+          "year": "2024",
+          "title": "iPAS AI Application Planning Engineer (Level 2 Intermediate Certified)",
+          "org": "Ministry of Economic Affairs",
+          "detail": "Official national certification in AI system architecture, machine learning pipeline design, and application planning."
+        },
+        {
+          "year": "2023",
+          "title": "SMART on FHIR & Health Informatics Architecture Certification",
+          "org": "Taiwan Association for Medical Informatics / HL7 Taiwan",
+          "detail": "Specialized training in FHIR standard resources, OAuth2 clinical launch workflows, and electronic health record integration."
+        }
+      ]
+    },
+    {
+      "key": "press",
+      "label": "Press Coverage & Media",
+      "items": [
+        {
+          "date": "2026-05",
+          "title": "From Paper to Digital: 'Weiren' Helps Healthcare Institutions Accelerate Transformation",
+          "outlet": "Watch Magazine (Issue 276)",
+          "url": "https://weemed.ai/news/watch-magazine-276-weiren-hospital-digitalization-2026/",
+          "note": "Featured coverage of Tatung Hospital: 80% online screening bookings, phone desk staffing reduced from 3 to 1.",
+          "related": ["V03", "V01", "PR01"]
+        },
+        {
+          "date": "2026-05",
+          "title": "Siaogang Hospital Health Management Center: Space + Digital Upgrade",
+          "outlet": "Watch Magazine (Issue 276)",
+          "url": "https://weemed.ai/news/watch-magazine-276-siaogang-health-center-2026/",
+          "related": ["V01", "PR01"]
+        },
+        {
+          "date": "2026-04",
+          "title": "From AR Picture Books to ESG Projects: FANSEE Promotes Education and Culture",
+          "outlet": "Watch Magazine (Issue 275)",
+          "url": "https://www.watchinese.com/article/2026/28423",
+          "related": ["V02", "PR02"]
+        },
+        {
+          "date": "2024-08",
+          "title": "How the Swipe Generation Experiences Literature through Interactive Installations",
+          "outlet": "BeautiMode Podcast (S14E5)",
+          "url": "https://www.beautimode.com/article/content/89981/",
+          "note": "Interview on Yunlin literature interactive installations and clinical LINE workflow architecture.",
+          "related": ["PR01"]
+        },
+        {
+          "date": "2022-11",
+          "title": "FANSEE Builds Metaverse 'Future Lab' for Children's AI Learning",
+          "outlet": "Business Next",
+          "url": "https://www.bnext.com.tw/article/72808/2022-taicca-3-fansee",
+          "related": ["V02", "PR02"]
+        }
+      ]
+    }
+  ]
+}

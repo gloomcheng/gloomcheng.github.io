@@ -1,0 +1,34 @@
+{
+  "source": "assets/brand-source/seed-beast-c2/seed-beast-c2-complete-alpha-clean.png",
+  "source_sha256": "031604568cd07250851ea649500c6ef8a48fafb27af50839a6075573ff2f732c",
+  "prepared_size": [
+    883,
+    1197
+  ],
+  "svg": "assets/brand-source/seed-beast-c2/complete-vector-candidate-v3/traced-candidate.svg",
+  "command": [
+    "vtracer",
+    "assets/brand-source/seed-beast-c2/complete-vector-candidate-v3/prepared-source.png",
+    "assets/brand-source/seed-beast-c2/complete-vector-candidate-v3/traced-candidate.svg",
+    "--preset",
+    "poster",
+    "--mode",
+    "spline",
+    "--hierarchical",
+    "cutout",
+    "--filter-speckle",
+    "20",
+    "--simplify",
+    "1.5",
+    "--path-precision",
+    "2",
+    "--optimize",
+    "1",
+    "--palette",
+    "#FF650F,#FF7A1A,#F4510B,#006A78,#087B86,#005964"
+  ],
+  "silhouette_iou": 0.994672,
+  "normalized_luma_difference": 0.021919,
+  "automatic_gate": "pass",
+  "requires_visual_review": true
+}

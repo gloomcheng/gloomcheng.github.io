@@ -1,0 +1,77 @@
+---
+import { render } from 'astro:content'
+import BlogLayout from '../../layouts/BlogLayout.astro'
+import {
+  type BlogPost,
+  blogPath,
+  formatBlogDate,
+  getBlogPosts,
+} from '../../lib/blog'
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts()
+  return posts.map((post, index) => ({
+    params: { slug: post.data.legacyPath.replace(/^\//, '') },
+    props: {
+      post,
+      newer: index > 0 ? posts[index - 1] : null,
+      older: index < posts.length - 1 ? posts[index + 1] : null,
+    },
+  }))
+}
+
+interface Props {
+  post: BlogPost
+  newer: BlogPost | null
+  older: BlogPost | null
+}
+
+const { post, newer, older } = Astro.props
+const { Content } = await render(post)
+---
+
+<BlogLayout
+  title={post.data.title}
+  description={post.data.description}
+  canonicalPath={blogPath(post.data.legacyPath)}
+  sectionLabel="FIELD NOTES／ARCHIVE"
+>
+  <article class="blog-post">
+    <header class="blog-post-header">
+      <nav class="blog-breadcrumb" aria-label="麵包屑">
+        <a href="/blog">Blog</a><span>／</span><span>Archive</span>
+      </nav>
+      <p class="blog-kicker">
+        ARCHIVE　／　
+        <time datetime={post.data.publishedAt.toISOString()}>
+          {formatBlogDate(post.data.publishedAt)}
+        </time>
+      </p>
+      <h1>{post.data.title}</h1>
+    </header>
+
+    <div class="blog-prose">
+      <Content />
+    </div>
+
+    <aside class="blog-archive-note">
+      <strong>ARCHIVE NOTE</strong>
+      <p>
+        本文由 tayanswa「Culture is Life」舊站資料庫遷入，保留原始日期、標題與內容；只移除不安全的可執行標記並修正站內連結。
+      </p>
+    </aside>
+
+    <nav class="blog-post-pagination" aria-label="前後文章">
+      {older ? (
+        <a href={blogPath(older.data.legacyPath)} rel="prev">
+          <span>← 較早一篇</span><strong>{older.data.title}</strong>
+        </a>
+      ) : <span />}
+      {newer && (
+        <a href={blogPath(newer.data.legacyPath)} rel="next">
+          <span>較新一篇 →</span><strong>{newer.data.title}</strong>
+        </a>
+      )}
+    </nav>
+  </article>
+</BlogLayout>

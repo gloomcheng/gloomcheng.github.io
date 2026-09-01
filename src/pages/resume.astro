@@ -1,0 +1,120 @@
+---
+import "../styles/global.css";
+import ReferenceSections from "../components/ReferenceSections.astro";
+import profile from "../data/profile.json";
+---
+
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>鄭富源 Fu-Yuan Cheng｜完整履歷 Resume & CV</title>
+    <meta
+      name="description"
+      content="鄭富源（Fu-Yuan Cheng / gloomcheng）的完整履歷、學術著作、演講紀錄、開源專案與公開來源。"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/brand/seed-beast-c2/complete-rig/seed-beast-c2-rig.svg" />
+  </head>
+  <body
+    class="m-0 min-w-80 bg-seed-paper font-sans text-lg leading-8 text-seed-ink antialiased"
+  >
+    <header
+      class="mx-auto grid min-h-20 max-w-[1240px] grid-cols-[1fr_auto] items-center border-b border-seed-ink/20 px-5 print:hidden md:grid-cols-[1fr_auto_1fr] md:px-7"
+    >
+      <a class="text-2xl font-black tracking-tight no-underline" href="/"
+        >gloomcheng<span class="text-seed-orange">/</span></a
+      >
+      <p class="hidden text-sm font-bold tracking-wider md:block">
+        RESUME &amp; CV
+      </p>
+      <nav class="flex items-center justify-end gap-5 text-sm font-bold">
+        <a href="/blog">Blog</a>
+        <a href="/">人物專題</a>
+        <div class="flex items-center rounded border border-seed-ink/30 p-1 text-xs">
+          <span class="rounded bg-seed-ink px-2 py-0.5 text-seed-paper font-bold">中文</span>
+          <a href="/resume/en" class="px-2 py-0.5 text-seed-ink hover:text-seed-orange transition-colors no-underline">EN</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-[1180px] px-5 py-12 print:p-0 md:px-7 md:py-16">
+      <div class="mb-8 flex items-center justify-between gap-4 text-sm font-bold print:hidden">
+        <div class="flex items-center gap-2 text-seed-ink/70">
+          <span>研究者與架構師檔案</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            class="border-2 border-seed-ink bg-seed-paper px-4 py-2 font-sans font-bold transition-transform hover:-translate-y-0.5 cursor-pointer shadow-sm"
+            onclick="window.print()">列印／存成 PDF</button
+          >
+        </div>
+      </div>
+
+      <!-- Researcher & Builder Profile Header (Third-Person Bio) -->
+      <header class="border-b-4 border-seed-ink pb-12 md:pb-16">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-wrap items-baseline gap-3">
+            <h1
+              class="m-0 font-display text-5xl leading-tight font-bold tracking-tight md:text-7xl"
+            >
+              {profile.person.name}
+            </h1>
+            <span class="text-2xl font-medium text-seed-ink/70 md:text-3xl">
+              {profile.person.name_en}
+            </span>
+            <span class="text-lg font-mono text-seed-orange font-bold">
+              (@{profile.person.handle})
+            </span>
+          </div>
+
+          <p class="text-xl font-bold text-seed-ink">
+            {profile.person.title}　<span class="font-normal text-seed-ink/70">｜　{profile.person.subtitle}</span>
+          </p>
+
+          <!-- Third-Person Professional Bio -->
+          <p class="max-w-[880px] text-base leading-7 text-seed-ink/85">
+            鄭富源（gloomcheng），創業者、軟體架構師與教育工作者，現為國立雲林科技大學工程科技研究所博士候選人。現任瑋易科技（WeeMed AI）創辦人兼執行長、台灣大數據分析（FANSEE）創辦人兼執行長，以及為人有限公司（ZhèLâng）創辦人兼技術長。長期致力於醫療資訊標準（SMART on FHIR）、擴增實境（AR）互動教育與開源社群。
+          </p>
+
+          <!-- Key Public Links -->
+          <div class="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold">
+            {profile.links.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-seed-teal underline underline-offset-4 hover:text-seed-orange transition-colors"
+              >
+                {link.label} ↗
+              </a>
+            ))}
+            <a
+              href="mailto:gloomcheng@gmail.com"
+              class="text-seed-teal underline underline-offset-4 hover:text-seed-orange transition-colors"
+            >
+              Email ↗
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Chronological & Categorized Reference Sections -->
+      <ReferenceSections />
+    </main>
+
+    <footer
+      class="mx-auto flex max-w-[1240px] justify-between px-5 py-7 text-sm print:hidden md:px-7"
+    >
+      <span>© 2026 gloomcheng／鄭富源</span>
+      <nav class="flex gap-5 font-bold">
+        <a href="/">人物專題</a>
+        <a href="/blog">Blog</a>
+        <a href="https://github.com/gloomcheng">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=j3zLzo0AAAAJ">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/gloomcheng/">LinkedIn</a>
+      </nav>
+    </footer>
+  </body>
+</html>

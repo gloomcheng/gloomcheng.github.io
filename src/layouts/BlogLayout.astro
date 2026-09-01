@@ -1,0 +1,81 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description: string
+  canonicalPath: string
+  sectionLabel?: string
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  sectionLabel = 'FIELD NOTES／ARCHIVE',
+} = Astro.props
+const siteUrl = 'https://gloomcheng.github.io'
+const canonical = new URL(canonicalPath, siteUrl).toString()
+const pageTitle = title === 'Blog' ? 'Blog｜gloomcheng' : `${title}｜gloomcheng`
+---
+
+<!doctype html>
+<html lang="zh-Hant-TW" class="overflow-x-hidden">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="鄭富源" />
+    <meta name="theme-color" content="#fff4df" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content={`${siteUrl}/assets/brand/seed-beast-c2/complete-master/seed-beast-c2-complete.png`}
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/brand/seed-beast-c2/complete-rig/seed-beast-c2-rig.svg"
+    />
+    <link rel="canonical" href={canonical} />
+  </head>
+  <body
+    class="m-0 min-w-80 overflow-x-hidden bg-seed-paper font-sans text-lg leading-8 text-seed-ink antialiased"
+  >
+    <a
+      class="fixed -top-20 left-4 z-50 bg-seed-ink px-4 py-3 text-sm font-bold text-white focus:top-4"
+      href="#main-content">跳到正文</a
+    >
+    <header
+      class="relative z-20 mx-auto grid min-h-20 max-w-[1240px] grid-cols-[1fr_auto] items-center border-b border-seed-ink/20 px-5 md:grid-cols-[1fr_auto_1fr] md:px-7"
+    >
+      <a class="text-2xl font-black tracking-[-.05em] no-underline" href="/"
+        >gloomcheng<span class="text-seed-orange">/</span></a
+      >
+      <p class="hidden text-xs font-bold tracking-[.13em] md:block">
+        {sectionLabel}
+      </p>
+      <nav class="flex items-center justify-end gap-4 text-sm font-bold" aria-label="主要導覽">
+        <a href="/blog" aria-current={canonicalPath.startsWith('/blog') ? 'page' : undefined}>Blog</a>
+        <a href="/resume">完整履歷</a>
+      </nav>
+    </header>
+    <main id="main-content">
+      <slot />
+    </main>
+    <footer
+      class="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 border-t border-seed-ink/20 px-5 py-7 text-sm md:flex-row md:px-7"
+    >
+      <span>© 2026 gloomcheng／鄭富源</span>
+      <nav class="flex flex-wrap gap-5 font-bold" aria-label="頁尾導覽">
+        <a href="/">人物特寫</a>
+        <a href="/blog">Blog</a>
+        <a href="https://github.com/gloomcheng">GitHub</a>
+        <a href="https://www.linkedin.com/in/gloomcheng/">LinkedIn</a>
+      </nav>
+    </footer>
+  </body>
+</html>

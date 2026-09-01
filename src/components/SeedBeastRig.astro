@@ -1,0 +1,57 @@
+---
+type Pose =
+  | 'idle'
+  | 'peek'
+  | 'curious'
+  | 'working'
+  | 'hop'
+  | 'blink'
+  | 'slump'
+  | 'flop-left'
+  | 'flop-right'
+  | 'nap'
+  | 'squish'
+  | 'stretch'
+  | 'roll'
+  | 'hide'
+  | 'dizzy'
+  | 'reluctant'
+
+const { pose = 'idle', class: className = '', label, interactive = false } = Astro.props as {
+  pose?: Pose
+  class?: string
+  label?: string
+  interactive?: boolean
+}
+const source = '/assets/brand/seed-beast-c2/complete-rig/seed-beast-c2-rig.svg'
+const transforms: Record<Pose, { actor: string; leaf: string; leftEye: string; rightEye: string; mouth: string }> = {
+  idle: { actor: '', leaf: '', leftEye: '', rightEye: '', mouth: '' },
+  peek: { actor: 'translate(0 210)', leaf: 'rotate(-8 580 380)', leftEye: '', rightEye: '', mouth: '' },
+  curious: { actor: 'rotate(5 441 720)', leaf: 'rotate(-14 580 380)', leftEye: 'translate(8 -3)', rightEye: 'translate(8 -3)', mouth: 'rotate(-4 435 720)' },
+  working: { actor: 'translate(0 28) rotate(-4 441 850)', leaf: 'rotate(10 580 380)', leftEye: 'translate(0 14)', rightEye: 'translate(0 14)', mouth: 'translate(0 10)' },
+  hop: { actor: 'translate(0 -48) rotate(3 441 720)', leaf: 'rotate(-18 580 380)', leftEye: '', rightEye: '', mouth: '' },
+  blink: { actor: '', leaf: 'rotate(5 580 380)', leftEye: 'translate(0 674) scale(1 .08) translate(0 -674)', rightEye: 'translate(0 674) scale(1 .08) translate(0 -674)', mouth: 'translate(0 5)' },
+  slump: { actor: 'translate(0 150) translate(441 850) scale(1.08 .82) translate(-441 -850)', leaf: 'rotate(28 580 380)', leftEye: 'translate(0 28)', rightEye: 'translate(0 28)', mouth: 'translate(0 30) rotate(8 435 720)' },
+  'flop-left': { actor: 'translate(441 720) rotate(-30) scale(.82) translate(-441 -720)', leaf: 'rotate(34 580 380)', leftEye: 'translate(-8 10)', rightEye: 'translate(-8 10)', mouth: 'rotate(15 435 720)' },
+  'flop-right': { actor: 'translate(441 720) rotate(30) scale(.82) translate(-441 -720)', leaf: 'rotate(-34 580 380)', leftEye: 'translate(8 10)', rightEye: 'translate(8 10)', mouth: 'rotate(-15 435 720)' },
+  nap: { actor: 'translate(441 720) rotate(78) scale(.72) translate(-441 -720)', leaf: 'rotate(-40 580 380)', leftEye: 'translate(0 674) scale(1 .08) translate(0 -674)', rightEye: 'translate(0 674) scale(1 .08) translate(0 -674)', mouth: 'translate(0 8)' },
+  squish: { actor: 'translate(441 930) scale(1.2 .68) translate(-441 -930)', leaf: 'rotate(18 580 380)', leftEye: 'translate(0 36)', rightEye: 'translate(0 36)', mouth: 'translate(0 46)' },
+  stretch: { actor: 'translate(441 720) scale(.78 1.1) translate(-441 -720)', leaf: 'rotate(-8 580 380)', leftEye: 'translate(0 -16)', rightEye: 'translate(0 -16)', mouth: 'translate(0 -18)' },
+  roll: { actor: 'translate(441 720) rotate(42) scale(.76) translate(-441 -720)', leaf: 'rotate(-52 580 380)', leftEye: '', rightEye: '', mouth: 'rotate(-18 435 720)' },
+  hide: { actor: 'translate(0 430)', leaf: 'rotate(12 580 380)', leftEye: '', rightEye: '', mouth: '' },
+  dizzy: { actor: 'rotate(-6 441 720)', leaf: 'rotate(24 580 380)', leftEye: 'translate(-12 4) rotate(-18 265 674)', rightEye: 'translate(12 -4) rotate(18 635 674)', mouth: 'rotate(180 435 720)' },
+  reluctant: { actor: 'translate(72 42) rotate(10 441 720)', leaf: 'rotate(38 580 380)', leftEye: 'translate(-12 8)', rightEye: 'translate(-12 8)', mouth: 'translate(-10 16) rotate(8 435 720)' },
+}
+const transform = transforms[pose]
+---
+<svg class:list={[className, interactive && 'group cursor-pointer']} viewBox="0 0 883 1197" role={label ? 'img' : undefined} aria-label={label} aria-hidden={label ? undefined : 'true'} focusable="false">
+  <g transform={transform.actor || undefined}>
+    <g class="origin-center transition-transform duration-500 ease-out [transform-box:fill-box] group-hover:-translate-y-2 group-hover:rotate-2 motion-reduce:transform-none motion-reduce:transition-none">
+      <use href={`${source}#body`} />
+      <g class="origin-bottom transition-transform delay-75 duration-500 ease-out [transform-box:fill-box] group-hover:-rotate-6 motion-reduce:transform-none motion-reduce:transition-none"><use href={`${source}#leaf`} transform={transform.leaf || undefined} /></g>
+      <g class="origin-center transition-transform duration-300 [transform-box:fill-box] group-hover:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"><use href={`${source}#eye-left`} transform={transform.leftEye || undefined} /></g>
+      <g class="origin-center transition-transform duration-300 [transform-box:fill-box] group-hover:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"><use href={`${source}#eye-right`} transform={transform.rightEye || undefined} /></g>
+      <g class="origin-center transition-transform duration-300 [transform-box:fill-box] group-hover:scale-110 motion-reduce:transform-none motion-reduce:transition-none"><use href={`${source}#mouth`} transform={transform.mouth || undefined} /></g>
+    </g>
+  </g>
+</svg>
